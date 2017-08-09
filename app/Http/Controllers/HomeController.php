@@ -13,8 +13,6 @@ class HomeController extends FrontController
 
     public function index() 
     {
-        print_r($this->getConfiguracion());
-        die();
         $noticias = Clases::take(3)->get();
         $clases = Clases::take(4)->get();
         $citas = Clases::take(3)->get();
