@@ -77,6 +77,12 @@ class ClasesCrudController extends CrudController {
             'label' => 'Contenidos Teóricos'
         ]);
 
+        $this->crud->addField([
+            'type' => 'ckeditor',
+            'name' => 'modalidad',
+            'label' => 'Modalidad'
+        ]);
+
 
 
 
