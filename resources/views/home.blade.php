@@ -67,7 +67,7 @@
 							<div class="feature feature-icon-large">
 
 								
-									<img src='{{Storage::url($clase->imghome)}}' class="icon-instrument" alt="{{ $clase->titulo }}"/>
+									<img src="{{asset('storage/'.$clase->imghome)}}" class="icon-instrument" alt="{{ $clase->titulo }}"/>
 								
 								<h5><a class="brown" href="{{ URL::to('clases/ver/'.$clase->id) }}">{{$clase->titulo}}</a></h5>
 								<p>

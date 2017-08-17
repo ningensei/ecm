@@ -12,9 +12,9 @@
                     @if(Storage::disk('public')->exists($foto->imagen))
                     <div class="{{$foto->ratio == '2-1'? 'col-sm-8':'col-sm-4'}} veo">
                         <div class="image-holder" data-scroll-reveal="enter bottom and move 30px">
-                            <a href="{{ Storage::url($foto->imagen) }}" data-lightbox="true" data-title="{{$foto->titulo}}">
+                            <a href="{{ asset('storage/'.$foto->imagen) }}" data-lightbox="true" data-title="{{$foto->titulo}}">
                                 <div class="background-image-holder">
-                                    <img class="background-image lightbox-image" alt="{{$foto->titulo}}" src="{{ Storage::url($foto->imagen) }}">
+                                    <img class="background-image lightbox-image" alt="{{$foto->titulo}}" src="{{asset('storage/'.$foto->imagen) }}">
                                 </div>
                             </a>
                         </div>

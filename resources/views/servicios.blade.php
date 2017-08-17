@@ -19,7 +19,7 @@
 	                <div class="feature feature-icon-large">
 	                    <div class="pull-left text-center">
 	                    	@if(Storage::disk('public')->exists($servicio->imagen))
-	                        <img class="service-img" src="{{Storage::url($servicio->imagen)}}" alt="{{$servicio->titulo}}">
+	                        <img class="service-img" src="{{asset('storage/'.$servicio->imagen)}}" alt="{{$servicio->titulo}}">
 	                        @endif
 	                    </div>
 	                    <div class="pull-right">
