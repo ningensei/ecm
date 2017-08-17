@@ -3,21 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Fotos;
 
-class FotosController extends FrontController
+class PropuestaController extends FrontController
 {
 
     public function index()
     {
-        $this->data['fotos'] = Fotos::paginate(6);
-
         $this->data['breadcrumbs'] = breadcrumbs(array(
             'Home' => url('/'),
-            'Fotos' => false
+            'Propuesta' => false
         ));
-
-
-    	return view('fotos', $this->data);
+        
+    	return view('propuesta', $this->data);
     }
 }

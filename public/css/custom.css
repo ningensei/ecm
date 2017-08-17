@@ -2,6 +2,13 @@
 .brown {
     color: #7f6a53;
 }
+.brown:hover {
+    color: #7f6a53;
+}
+
+.text-white p {
+    color: #FFF!important;
+}
 
 .main-container section,
 .main-container header {
@@ -65,8 +72,9 @@
 /* Home */
 
 .icon-instrument {
-    height: 90px;
+    max-height: 90px;
     margin-bottom: 15px;
+    max-width: 100px;
 }
 
 /* Servicios */

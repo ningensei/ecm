@@ -3,23 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Clases;
 
-class ClasesController extends Controller
+class ClasesController extends FrontController
 {
     public function __construct() {
-        $this->current = 'clases';
+        $this->data['current'] = 'clases';
+        parent::__construct();
     }
 
-    public function ver($id)
+    public function ver($slug)
     {
-        $name = 'Piano';
-        $breadcrumbs = breadcrumbs(array(
+        $id = explode('-', $slug)[0];
+        
+        $clase = Clases::find($id);
+        $this->data['clase'] = $clase;
+
+        $name = $clase->titulo;
+        $this->data['breadcrumbs'] = breadcrumbs(array(
             'Home' => url('/'),
             'Clases' => false,
             $name => false
         ));
         
-        $current = $this->current;
-        return view('clase', compact('current', 'breadcrumbs'));
+        return view('clase', $this->data);
     }
 }

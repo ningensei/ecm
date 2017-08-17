@@ -25,8 +25,7 @@ class FotosCrudRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest {
     public function rules()
     {
         return [
-            'titulo' => 'required|min:5|max:255',
-            'imagen' => 'required',
+            'titulo' => 'required|min:5|max:255'
         ];
     }
 

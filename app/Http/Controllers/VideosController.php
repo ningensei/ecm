@@ -3,21 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Videos;
 
-class VideosController extends Controller
+class VideosController extends FrontController
 {
-    public function __construct() {
+    public function index()
+    {
+        $videos = Videos::paginate(2);
+        
+        foreach ($videos as $video) {
+            $video->url = youtubeEmbedUrl($video->url);
+        }
 
-        $this->breadcrumbs = breadcrumbs(array(
+        $this->data['videos'] = $videos;
+
+        $this->data['breadcrumbs'] = breadcrumbs(array(
             'Home' => url('/'),
             'Videos' => false
         ));
-    }
 
-    public function index()
-    {
-        $breadcrumbs = $this->breadcrumbs;
-
-    	return view('videos', compact('breadcrumbs'));
+    	return view('videos', $this->data);
     }
 }

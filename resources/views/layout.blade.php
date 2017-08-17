@@ -44,8 +44,8 @@
 					<div class="row utility-menu">
 						<div class="col-sm-12">
 							<div class="utility-inner clearfix">
-								<span class="alt-font"><i class="icon icon_pin"></i> GRAL. GÜEMES 1645. FLORIDA</span>
-								<span class="alt-font"><i class="icon icon_mail"></i> CONTACTO@ECMUSICA.COM.AR</span>
+								<span class="alt-font"><i class="icon icon_pin"></i>{{$configuracion->direccion}}</span>
+								<span class="alt-font"><i class="icon icon_mail"></i> {{$configuracion->email}}</span>
 							
 								
 								<ul class="social-icons text-right">
@@ -56,7 +56,7 @@
 									</li> -->
 							
 									<li>
-										<a href="#">
+										<a target="_blank" href="https://www.facebook.com/ECM.musica">
 											<i class="icon social_facebook"></i>
 										</a>
 									</li>
@@ -83,78 +83,50 @@
 					
 						<div class="col-sm-12 columns text-center">
 							<ul class="menu">
-								<li><a href="#">LA ESCUELA</a></li>
+
+								<li class="has-dropdown"><a href="#">LA ESCUELA</a>
+									<ul class="subnav">
+										<li><a href="{{ URL::to('propuesta') }}">Propuesta</a></li>
+										<li><a href="{{ URL::to('profesores') }}">Profesores</a></li>
+										
+									</ul>
+								</li>
+
 								<li class="has-dropdown"><a href="#">CURSOS</a>
 									<ul class="subnav">
-										<li><a href="#">LENGUAJE MUSICAL</a></li>
-										<li><a href="#">PRODUCCIÓN MUSICAL</a></li>
-										<li><a href="#">COMPOSICIÓN Y ARMONÍA</a></li>
-										<li><a href="#">CURSO DE RITMO</a></li>
-										<li><a href="#">ENSAMBLES</a></li>
+										@foreach($cursos as $curso)
+											<li><a href="{{ URL::to('cursos/ver/'.$curso->id).'-'.makeSlugs($curso->titulo) }}">{{$curso->titulo}}</a></li>
+										@endforeach
+										
 									</ul>
 								</li>
 
 								<li class="has-dropdown"><a href="#">CLASES</a>
 									<div class="subnav subnav-fullwidth">
-										<div class="col-md-3">
-											<ul class="subnav">
-												<li><a href="#">CANTO</a></li>
-												<li><a href="#">GUIRARRA</a></li>
-												<li><a href="#">BAJO</a></li>
-												<li><a href="#">BATERÍA</a></li>
-												<li><a href="#">PERCUSIÓN</a></li>
-											</ul>	
-										</div>
+
+										@foreach ($clases->chunk(5) as $chunk)
+										    <div class="col-md-3">
+												<ul class="subnav">
+										        @foreach ($chunk as $clase)
+										            <li><a href="{{ URL::to('clases/ver/'.$clase->id).'-'.makeSlugs($clase->titulo) }}">{{$clase->titulo}}</a></li>
+										        @endforeach
+											    </ul>
+											</div>
+										@endforeach
 										
-										<div class="col-md-3">
-											<ul class="subnav">
-												<li><a href="#">CELLO</a></li>
-												<li><a href="#">CONTRABAJO</a></li>
-												<li><a href="#">VIOLÍN</a></li>
-												<li><a href="#">VIOLA</a></li>
-												<li><a href="#">PIANO</a></li>
-											</ul>	
-										</div>
-										
-										<div class="col-md-3">
-											<ul class="subnav">
-												<li><a href="#">ARMÓNICA</a></li>
-												<li><a href="#">ACORDEÓN A PIANO</a></li>
-												<li><a href="#">BANDONEÓN</a></li>
-												<li><a href="#">FLAUTA</a></li>
-												<li><a href="#">UKELELE</a></li>
-											</ul>	
-										</div>
-										
-										<div class="col-md-3">
-											<ul class="subnav">
-												<li><a href="#">SAXO</a></li>
-												<li><a href="#">CLARINETE</a></li>
-												<li><a href="#">INICIACIÓN MUSICAL</a></li>
-											</ul>	
-										</div>
 									</div>
 								</li>
 
-								<li><a href="#">SERVICIOS</a>
-									<!-- <ul class="subnav">
-										<li><a href="#">CLASES A DOMICILIO</a></li>
-										<li><a href="#">CLASES A DISTANCIA</a></li>
-										<li><a href="#">PRPERACIÓN PARA EXAMENS DE INGRESO</a></li>
-										<li><a href="#">ASESORAMIENTO PARA COMPRA DE INSTRUMENTOS</a></li>
-										<li><a href="#">TALLERES PARA EMPRESAS E INSTITUCIONES</a></li>
-										<li><a href="#">MÚSICA PARA EVENTOS</a></li>
-									</ul> -->
-								</li>
+								<li><a href="{{ URL::to('servicios') }}">SERVICIOS</a></li>
 
 								<li class="has-dropdown"><a href="#">GALERÍA</a>
 									<ul class="subnav">
-										<li><a href="#">FOTOS</a></li>
-										<li><a href="#">VIDEOS</a></li>
+										<li><a href="{{ URL::to('fotos') }}">FOTOS</a></li>
+										<li><a href="{{ URL::to('videos') }}">VIDEOS</a></li>
 									</ul>
 								</li>
 
-								<li><a href="#">CONTACTO</a></li>
+								<li><a href="{{ URL::to('contacto') }}">CONTACTO</a></li>
 								
 								
 								

@@ -8,10 +8,8 @@
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
                 <span class="sub alt-font">CURSOS</span>
-                <h1 class="brown"><strong>Lenguaje Musical</strong></h1>
-                <p class="lead">
-                    Las clases de lenguaje musical en la ECM están dirigidas a ninnos, adolescentes y adultos que quieran profundizar en la parte teórica de la música. El curso de lenguaje musical puede ser individual o grupal, dependiendo del nivel y horarios disponibles del alumno. Es un buen complemento para aquellos que toman clases de instrumento o canto. Las clases son personalizadas y se adaptana losconocimientos de los alumnos
-                </p>
+                <h1 class="brown"><strong>{!! $curso->titulo !!}</strong></h1>
+                <p class="lead">{!! $curso->descripcion !!}</p>
             </div>
         </div>
 
@@ -32,6 +30,7 @@
                     
                     </li>
                     
+                    @if($curso->objetivos)
                     <li>
                         <div class="title">
                             <i class="icon-trophy"></i>
@@ -39,13 +38,12 @@
                         </div>
                         
                         <div class="text-content text-justify">
-                            <p>
-                                Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia. 
-
-                            </p>
+                            <p>{!! $curso->objetivos !!}</p>
                         </div>
                     </li>
-                    
+                    @endif
+
+                    @if($curso->plan_estudio)
                     <li>
                         <div class="title">
                             <i class="icon-graduation"></i>
@@ -53,15 +51,10 @@
                         </div>
                         
                         <div class="text-content text-justify">
-                            <p>
-                                El curso consiste de tres áreas: teoría, práctica rítmica y entrenamiento auditivo.
-                                En la parte teórica se enseñarán conceptos fundamentales de armonía: tipos de acorde, intervalos, tonalidad mayor y menor, armonía funcional, armonía modal, etc. Además, se analizarán canciones de diversos estilos de música. <br>
-                                En la parte rítmica cada alumno tendrá la posibilidad de tocar instrumentos percusivos y aplicarlos en distintos estilos. También se presentarán ejemplos para acompañar e improvisar, y afianzar la sensación rítmica de cada músico. <br>
-                                En la parte auditiva se entrenará el oído del músico para poder reconocer acordes e intervalos y así poder aprender canciones sacándolas “de oído”.
-
-                            </p>
+                            <p>{!! $curso->plan_estudio !!}</p>
                         </div>
                     </li>
+                    @endif
                     
                 </ul>
             </div>

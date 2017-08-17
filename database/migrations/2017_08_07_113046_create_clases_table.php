@@ -22,6 +22,7 @@ class CreateClasesTable extends Migration
             $table->text('imghome')->nullable();
             $table->text('info_gral')->nullable();
             $table->text('objetivos')->nullable();
+            $table->text('modalidad')->nullable();
             $table->text('plan_estudio')->nullable();
             $table->text('contenidos_teoricos')->nullable();
             $table->timestamps();

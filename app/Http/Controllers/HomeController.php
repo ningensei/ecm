@@ -10,13 +10,12 @@ use App\Citas;
 
 class HomeController extends FrontController
 {
-
     public function index() 
     {
-        $noticias = Clases::take(3)->get();
-        $clases = Clases::take(4)->get();
-        $citas = Clases::take(3)->get();
-
-    	return view('home', compact('noticias', 'clases', 'citas'));
+        $this->data['noticias'] = Noticias::take(3)->get();
+        $this->data['clases_home'] = $clases = Clases::take(4)->inRandomOrder()->whereNotNull('imghome')->get();
+        $this->data['citas'] = $citas = Citas::take(3)->get();
+        
+    	return view('home', $this->data);
     }
 }

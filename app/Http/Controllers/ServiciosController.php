@@ -3,20 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Servicios;
 
-class ServiciosController extends Controller
+class ServiciosController extends FrontController
 {
-    public function __construct() {
-
-        $this->breadcrumbs = breadcrumbs(array(
+    public function index()
+    {
+        $this->data['servicios'] = Servicios::get();
+        
+        $this->data['breadcrumbs'] = breadcrumbs(array(
             'Home' => url('/'),
             'Servicios' => false
         ));
-    }
-
-    public function index()
-    {
-        $breadcrumbs = $this->breadcrumbs;
-    	return view('servicios', compact('breadcrumbs'));
+        
+    	return view('servicios', $this->data);
     }
 }

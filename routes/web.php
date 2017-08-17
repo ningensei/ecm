@@ -22,13 +22,21 @@ Route::group(['middleware' => ['web']], function () {
 
 	Route::get('/', 'HomeController@index');
 
+	// Propuesta
+
+	Route::get('/propuesta', 'PropuestaController@index');
+
+	// Profesores
+
+	Route::get('/profesores', 'ProfesoresController@index');
+
 	// Clases
 
-	Route::get('clases/ver/{id}', 'ClasesController@ver');
+	Route::get('clases/ver/{slug}', 'ClasesController@ver');
 
 	// Cursos
 
-	Route::get('/cursos/ver/{id}', 'CursosController@ver');
+	Route::get('/cursos/ver/{slug}', 'CursosController@ver');
 
 	// Servicios
 

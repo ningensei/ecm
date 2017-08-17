@@ -14,7 +14,7 @@ class FotosCrudController extends CrudController {
         $this->crud->setRoute("admin/fotos");
         $this->crud->setEntityNameStrings('foto', 'fotos');
 
-        $this->crud->setColumns(['titulo', 'imagen']);
+        $this->crud->setColumns(['titulo', 'imagen', 'ratio']);
 
         // ----- FIELDS
 
@@ -27,12 +27,19 @@ class FotosCrudController extends CrudController {
         
         $this->crud->addField([
             'name' => 'imagen',
-            'label' => 'Imagen (65x65 aprox)',
+            'label' => 'Imagen',
             'type' => 'upload',
             'upload' => true,
             'disk' => 'public'
         ]);
 
+        $this->crud->addField([
+            'name' => 'ratio',
+            'label' => "Razón (ancho x alto)",
+            'type' => 'select_from_array',
+            'options' => ['1-1' => '1-1', '2-1' => '2-1'],
+            'allows_null' => false,
+        ]);
 
     }
 

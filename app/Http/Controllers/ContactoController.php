@@ -4,19 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ContactoController extends Controller
+class ContactoController extends FrontController
 {
-    public function __construct() {
-
-        $this->breadcrumbs = breadcrumbs(array(
-            'Home' => url('/'),
-            'Contacto' => false
-        ));
-    }
 
     public function index()
     {
-        $breadcrumbs = $this->breadcrumbs;
-    	return view('contacto', compact('breadcrumbs'));
+        $this->data['breadcrumbs'] = breadcrumbs(array(
+            'Home' => url('/'),
+            'Contacto' => false
+        ));
+
+    	return view('contacto', $this->data);
     }
 }
