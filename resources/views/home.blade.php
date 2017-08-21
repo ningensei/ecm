@@ -1,6 +1,25 @@
 @extends('layout')
 
 @section('content')
+
+	<section class="duplicatable-content">
+		<div class="container">
+			<div class="row">
+				@foreach( $noticias as $noticia )
+				<div class="col-sm-4">
+					<div class="feature">
+						<h5 class="brown">{{ $noticia->titulo }}</h5>
+						<p>
+							{!! $noticia->descripcion !!}
+						</p>
+					</div>
+				</div><!--end 4 col-->
+				@endforeach
+			
+			</div><!--end of row-->
+		</div>
+	</section>
+
 	<section class="hero-slider">
 		<ul class="slides">
 			<li class="overlay">
@@ -30,25 +49,7 @@
 
 		</ul>
 	</section>
-
-	<section class="duplicatable-content">
-		<div class="container">
-			<div class="row">
-				@foreach( $noticias as $noticia )
-				<div class="col-sm-4">
-					<div class="feature">
-						<h5 class="brown">{{ $noticia->titulo }}</h5>
-						<p>
-							{!! $noticia->descripcion !!}
-						</p>
-					</div>
-				</div><!--end 4 col-->
-				@endforeach
-			
-			</div><!--end of row-->
-		</div>
-	</section>
-
+	
 	<section class="duplicatable-content">
 
 		<div class="container">

@@ -37,7 +37,7 @@
                             <span>Objetivos</span>
                         </div>
                         
-                        <div class="text-content text-justify">
+                        <div class="text-content text-center">
                             <p>{!! $curso->objetivos !!}</p>
                         </div>
                     </li>
@@ -50,7 +50,7 @@
                             <span>Plan de estudios</span>
                         </div>
                         
-                        <div class="text-content text-justify">
+                        <div class="text-content text-center">
                             <p>{!! $curso->plan_estudio !!}</p>
                         </div>
                     </li>

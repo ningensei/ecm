@@ -38,50 +38,20 @@
     	</div>
 				
 		<div class="nav-container">
-			<nav class="top-bar centered-logo">
+			<nav class="top-bar overlay-bar">
 				<div class="container">
-				
-					<div class="row utility-menu">
-						<div class="col-sm-12">
-							<div class="utility-inner clearfix">
-								<span class="alt-font"><i class="icon icon_pin"></i>{{$configuracion->direccion}}</span>
-								<span class="alt-font"><i class="icon icon_mail"></i> {{$configuracion->email}}</span>
-							
-								
-								<ul class="social-icons text-right">
-									<!-- <li>
-										<a href="#">
-											<i class="icon social_twitter"></i>
-										</a>
-									</li> -->
-							
-									<li>
-										<a target="_blank" href="https://www.facebook.com/ECM.musica">
-											<i class="icon social_facebook"></i>
-										</a>
-									</li>
-							
-									<!-- <li>
-										<a href="#">
-											<i class="icon social_dribbble"></i>
-										</a>
-									</li> -->
-								</ul>
-							</div>
+					<div class="nav-menu">
+						<div class="col-sm-3 col-md-2 columns">
+							<a href="{{ URL::to('/') }}">
+								<img class="logo logo-light" alt="Logo" src="{{ URL::asset('images/ecm.png') }}">
+								<img class="logo logo-dark" alt="Logo" src="{{ URL::asset('images/ecm_dark.png') }}">
+							</a>
 						</div>
-					</div>
 					
-					<div class="row">
-						<div class="col-sm-12 text-center">
-							<img class="logo logo-light" alt="Logo" src="{{ URL::asset('/images/logo.png') }}">
-							<img class="logo logo-dark" alt="Logo" src="{{ URL::asset('/images/logo.png') }}">
-						</div>
-					</div>
-				
-				
-					<div class="row nav-menu">
 					
-						<div class="col-sm-12 columns text-center">
+					
+					
+						<div class="col-sm-9 col-md-10 columns">
 							<ul class="menu">
 
 								<li class="has-dropdown"><a href="#">LA ESCUELA</a>
@@ -145,7 +115,46 @@
 		
 		</div>
 		<div class="main-container">
-			
+			<header class="page-header resume-header">
+				<div class="background-image-holder parallax-background">
+					<img class="background-image" alt="Background Image" src="{{URL::asset('images/header-background.jpg') }}">
+				</div>
+				
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<h1 class="text-white space-bottom-medium">Escuela Creativa de Música</h1>
+							<span>Un espacio personal para el esparcimiento y el desarrollo de la creatividad</span>
+							<ul class="social-icons">
+								<li>
+									<a href="#">
+										<i class="icon social_twitter"></i>
+									</a>
+								</li>
+								
+								<li>
+									<a href="#">
+										<i class="icon social_facebook"></i>
+									</a>
+								</li>
+								
+								<li>
+									<a href="#">
+										<i class="icon social_instagram"></i>
+									</a>
+								</li>
+								
+								<li>
+									<a href="#">
+										<i class="icon social_dribbble"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div><!--end of row-->
+				</div><!--end of container-->
+			</header>
+
 			@yield('content')
 
 		</div>

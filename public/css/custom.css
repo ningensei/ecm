@@ -100,7 +100,7 @@ button:focus {
 .form-contact input,
 .form-contact textarea,
 .form-contact .select-wrapper {
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     margin-bottom: 15px;
 }
@@ -117,7 +117,7 @@ button:focus {
 .form-contact .select-wrapper {
     
     text-align: left;
-    padding-left: 5px;
+    padding-left: 0;
     padding-right: 5px;
 }
 
