@@ -105,9 +105,14 @@ button:focus {
     margin-bottom: 15px;
 }
 
-.form-contact input[type='checkbox'] { 
+.form-contact input[type='radio'] { 
     width: auto;
+    margin-right: 7px;
     margin-bottom: 0;
+}
+
+.form-contact input[type='submit'] {
+    color: #64513d;
 }
 
 .form-contact label {

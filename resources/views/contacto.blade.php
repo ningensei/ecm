@@ -15,19 +15,26 @@
         </div>
         
         <div class="row">
-            <form class="form-contact">
+        <script type="text/javascript">var submitted=false;</script>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
+    onload='if(submitted) {window.location="{{URL::to('/')}}";}'></iframe>
+          
+            <form id="formContact" method="post" target="hidden_iframe" action="https://docs.google.com/forms/d/e/1FAIpQLSf9Q0T2VEKWni2Zg1Wo7qwshmg2bhs0JX1kaZnwgsxQhxNQ7Q/formResponse" onsubmit="submitted=true;" class="form-contact">
                 <div class="col-md-4 col-md-offset-2">
                     <div class="clearfix">
                         <div>
-                            <input class="form-name validate-required" type="text" placeholder="Nombre y apellido *" name="nombre">
-                            <input class="form-email validate-required validate-email" type="text" name="celular" placeholder="Celular *">
-                            <input class="form-email validate-required validate-email" type="text" name="localidad" placeholder="Localidad">
+                            <input required class="validate-required" type="text" placeholder="Nombre y apellido *" name="entry.1020658685">
+
+                            <input required class="validate-required" type="text" name="entry.1129959952" placeholder="Celular *">
+
+                            <input required class="validate-required" type="text" name="entry.919519487" placeholder="Localidad">
+                            
                             <div class="select-wrapper">
-                                <select>
-                                    <option>Horarios disponibles</option>
-                                    <option>9 hs. a 13 hs.</option>
-                                    <option>14 hs. a 16 hs.</option>
-                                    <option>16 hs. a 21 hs.</option>
+                                <select name="entry.1123327660">
+                                    <option selected disabled>Horarios disponibles</option>
+                                    <option value="9 hs. a 13 hs.">9 hs. a 13 hs.</option>
+                                    <option value="14 hs. a 16 hs.">14 hs. a 16 hs.</option>
+                                    <option value="16 hs. a 21 hs.">16 hs. a 21 hs.</option>
                                 </select>
                             </div>
                         </div>
@@ -37,26 +44,43 @@
                 <div class="col-md-4">
                     <div class="clearfix">
                         <div>
-                            <input class="form-name validate-required" type="text" placeholder="Email *" name="email">
-                            <input class="form-email validate-required validate-email" type="text" name="telefono" placeholder="Teléfono">
+                            <input required class="validate-required" type="text" placeholder="Email *" name="entry.452812767">
+                            
+                            <input type="text" name="entry.5881413" placeholder="Teléfono">
+
                             <div class="select-wrapper">
-                                <select>
-                                    <option>Interesado en curso</option>
-                                    <option>Piano</option>
-                                    <option>Canto</option>
-                                    <option>Batería</option>
+                                <select name="entry.1344639690">
+                                    <option selected disabled>Interesado en curso</option>
+                                    <option value="Piano">Piano</option>
+                                    <option value="Canto">Canto</option>
+                                    <option value="Batería">Batería</option>
+                                    <option value="Guitarra">Guitarra</option>
+                                    <option value="Bajo">Bajo</option>
+                                    <option value="Armónica">Armónica</option>
+                                    <option value="Violín">Violín</option>
+                                    <option value="Cello">Cello</option>
+                                    <option value="Contrabajo">Contrabajo</option>
+                                    <option value="Percusión">Percusión</option>
+                                    <option value="Saxo">Saxo</option>
+                                    <option value="Ukelele">Ukelele</option>
+                                    <option value="Acordeón">Acordeón</option>
+                                    <option value="Ensamble de Jazz">Ensamble de Jazz</option>
+                                    <option value="Ensamble de Rock">Ensamble de Rock</option>
+                                    <option value="Lenguaje musical">Lenguaje musical</option>
+                                    <option value="Producción musical">Producción musical</option>
                                 </select>
                             </div>
+
                             <div class="select-wrapper">
-                                <select>
-                                    <option>Cómo nos conoció?</option>
-                                    <option>Google</option>
-                                    <option>Facebook</option>
-                                    <option>Recomandación</option>
-                                    <option>Vía Pública</option>
-                                    <option>Revista planetario</option>
-                                    <option>Mail</option>
-                                    <option>Youtube</option>
+                                <select name="entry.707208057">
+                                    <option selected disabled>Cómo nos conoció?</option>
+                                    <option value="Google">Google</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="Recomandación">Recomandación</option>
+                                    <option value="Vía Pública">Vía Pública</option>
+                                    <option value="Revista planetario">Revista planetario</option>
+                                    <option value="Mail">Mail</option>
+                                    <option value="Youtube">Youtube</option>
                                 </select>
                             </div>
                         </div>
@@ -66,14 +90,18 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="clearfix">
                         <div>
-                            <textarea class="form-message validate-required" name="comentario" placeholder="Comentario"></textarea>
-                            <input type="checkbox" name="novedades" id="novedades">
-                                
-                            <label for="novedades">
-                                Deseo recibir por correo electrónico novedades del sitio web
-                            </label>
+                            <textarea class="form-message" name="entry.232831983" placeholder="Comentario"></textarea>
 
-                            <br>
+                            <div>
+                                <label>
+                                    Deseo recibir por correo electrónico novedades del sitio web
+                                </label>
+                                <br>
+                                <label><input type="radio" value="si" name="entry.1320594732">Sí</label>
+                                <br>    
+                                <label><input type="radio" value="no" name="entry.1320594732">No</label>
+                            </div>
+
                             <div class="text-center submit-wrapper">
                                 <input type="submit" class="send-form" value="Enviar">
                             </div>
