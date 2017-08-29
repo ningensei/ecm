@@ -148,7 +148,7 @@ $(document).ready(function(){
 
 	// Slider Initializations
 	
-	$('.hero-slider').flexslider({});
+	$('.hero-slider').flexslider({'play': true});
 	$('.image-slider').flexslider({ animation: "slide"});
 	$('.testimonials-slider').flexslider({ directionNav: false });
 	

@@ -7,6 +7,15 @@ use App\Servicios;
 
 class ServiciosController extends FrontController
 {
+    public function __construct()
+    {
+        $this->data['js'] = array(
+            'imagesloaded.pkgd.min.js',
+            'masonry.pkgd.min.js'
+        );
+        parent::__construct();
+    }
+
     public function index()
     {
         $this->data['servicios'] = Servicios::get();

@@ -2,6 +2,35 @@
 
 @section('content')
 
+	<section class="hero-slider">
+		<ul class="slides">
+			@foreach($slides_home as $slide)
+
+				@if(Storage::disk('public')->exists($slide['imagen']))
+				<li class="overlay">
+					<div class="background-image-holder parallax-background">
+						<img class="background-image" alt="Background Image" src="{{ asset('storage/'.$slide['imagen']) }}">
+					</div>
+					
+					<div class="container align-vertical">
+						<div class="row">
+							<div class="col-md-6 col-sm-9">
+								<h1 class="text-white">{{ $slide['texto'] }}</h1>
+								<a href="{{URL::to('contacto')}}" class="btn btn-primary btn-white">Contáctanos</a>
+							</div>
+						</div>
+					</div><!--end of container-->
+				</li><!--end of individual slide-->
+				
+				<!--end of individual slide-->
+				@endif
+
+			@endforeach
+
+		</ul>
+	</section>
+	
+
 	<section class="duplicatable-content">
 		<div class="container">
 			<div class="row">
@@ -49,7 +78,7 @@
 
 		</ul>
 	</section>
-	
+
 	<section class="duplicatable-content">
 
 		<div class="container">
@@ -59,21 +88,18 @@
 				</div>
 			</div><!--end of row-->
 
-			<div class="row">
+			<div class="row grid">
 
 				@foreach($clases_home as $clase)
 					@if(Storage::disk('public')->exists($clase->imghome))
-						<div class="col-md-3 col-sm-6">
+						<div class="col-md-2 col-sm-6 item">
 
-							<div class="feature feature-icon-large">
+							<div class="feature feature-icon-large text-center">
 
-								
+								<a class="brown" href="{{ URL::to('clases/ver/'.$clase->id) }}">
 									<img src="{{asset('storage/'.$clase->imghome)}}" class="icon-instrument" alt="{{ $clase->titulo }}"/>
+								</a>
 								
-								<h5><a class="brown" href="{{ URL::to('clases/ver/'.$clase->id) }}">{{$clase->titulo}}</a></h5>
-								<p>
-									{!! $clase->descripcion_home !!}
-								</p>
 							</div>
 						</div><!--end 3 col-->
 					@endif

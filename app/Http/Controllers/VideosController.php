@@ -9,6 +9,7 @@ class VideosController extends FrontController
 {
     public function index()
     {
+        $this->data['current'] = 'videos';
         $videos = Videos::paginate(2);
         
         foreach ($videos as $video) {

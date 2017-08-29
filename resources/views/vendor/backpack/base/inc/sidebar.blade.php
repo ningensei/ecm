@@ -25,6 +25,8 @@
           
           <li><a href="{{ url('admin/configuracion') }}"><i class="fa fa-tag"></i> <span>
           Configuracion</span></a></li>
+          <li><a href="{{ url('admin/home') }}"><i class="fa fa-tag"></i> <span>
+          Home</span></a></li>
           <li><a href="{{ url('admin/clases') }}"><i class="fa fa-tag"></i> <span>
           Clases</span></a></li>
           <li><a href="{{ url('admin/citas') }}"><i class="fa fa-tag"></i> <span>

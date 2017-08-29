@@ -5,13 +5,11 @@
 
 		<?= $breadcrumbs; ?>
 		
+		@if(Storage::disk('public')->exists($clase->imginterna))
 	    <div class="background-image-holder parallax-background">
-	    	@if(Storage::disk('public')->exists($clase->imginterna))
-	    		<img class="background-image" alt="Background Image" src="{{ asset('storage/'.$clase->imghome) }}">
-	    	@else
-	        	<img class="background-image" alt="Background Image" src="{{ asset('img/hero6.jpg') }}">
-	        @endif
+	    		<img class="background-image" alt="Background Image" src="{{ asset('storage/'.$clase->imginterna) }}">
 	    </div>
+	    @endif
 	    
 	    <div class="container">
 	        <div class="row">

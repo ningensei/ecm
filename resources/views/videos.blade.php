@@ -16,7 +16,7 @@
 
 	                <iframe width="100%" height="300" src="{{$video->url}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 
-	                {{$video->descripcion}}
+	                {!! $video->descripcion !!}
 	                
 	            </article>
 	        </div>

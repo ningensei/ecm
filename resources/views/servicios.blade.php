@@ -12,17 +12,21 @@
 	            </div>
 	        </div>
 
-	        <div class="row">
+	        <div class="row grid">
 
 	        	@foreach($servicios as $servicio)
-	        	<div class="col-sm-6">
+	        	<div class="col-sm-6 item">
 	                <div class="feature feature-icon-large">
+	                	@if(Storage::disk('public')->exists($servicio->imagen))
 	                    <div class="pull-left text-center">
-	                    	@if(Storage::disk('public')->exists($servicio->imagen))
 	                        <img class="service-img" src="{{asset('storage/'.$servicio->imagen)}}" alt="{{$servicio->titulo}}">
-	                        @endif
 	                    </div>
+
 	                    <div class="pull-right">
+	                    @else
+
+	                    <div>
+	                    @endif
 	                        <h5 class="brown">{{$servicio->titulo}}</h5>
 	                        <p>
 	                            {!! $servicio->descripcion !!}
