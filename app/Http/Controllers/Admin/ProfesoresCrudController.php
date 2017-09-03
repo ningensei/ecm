@@ -20,7 +20,7 @@ class ProfesoresCrudController extends CrudController {
         $this->crud->addField([
             'type' => 'ckeditor',
             'name' => 'texto',
-            'label' => 'Primer párrafo'
+            'label' => 'Descripción'
         ]);
 
         $this->crud->addField([
