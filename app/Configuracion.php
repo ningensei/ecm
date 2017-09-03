@@ -10,8 +10,17 @@ class Configuracion extends Model
     use CrudTrait;
 
     protected $table = 'configuracion';
-    protected $fillable = ['texto_contacto', 'direccion', 'email', 'telefono'];
+    protected $fillable = ['texto_contacto', 'direccion', 'email', 'telefono', 'favicon'];
 
     public $timestamps = true;
+
+    public function setFaviconAttribute($value)
+    {
+        $attribute_name = "favicon";
+        $disk = "public";
+        $destination_path = "uploads/configuracion";
+
+        $this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
+    }
 
 }

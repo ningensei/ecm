@@ -10,11 +10,16 @@ class Home extends Model
     use CrudTrait;
 
     protected $table = 'home';
-    protected $fillable = ['slider1', 'texto_slide1', 'slider2', 'texto_slide2', 'slider3', 'texto_slide3'];
+    protected $fillable = ['video', 'slider1', 'mslide1', 'texto_slide1', 'slider2', 'mslide2', 'texto_slide2', 'slider3', 'mslide3', 'texto_slide3'];
     private $destination_path = 'uploads/home';
     private $disk = 'public';
 
     public $timestamps = true;
+
+    public function setVideoAttribute($value)
+    {
+        $this->uploadFileToDisk($value, 'video', $this->disk, $this->destination_path);
+    }
 
     public function setSlider1Attribute($value)
     {
@@ -29,5 +34,20 @@ class Home extends Model
     public function setSlider3Attribute($value)
     {
         $this->uploadFileToDisk($value, 'slider3', $this->disk, $this->destination_path);
+    }
+
+    public function setMslide1Attribute($value)
+    {
+        $this->uploadFileToDisk($value, 'mslide1', $this->disk, $this->destination_path);
+    }
+
+    public function setMslide2Attribute($value)
+    {
+        $this->uploadFileToDisk($value, 'mslide2', $this->disk, $this->destination_path);
+    }
+
+    public function setMslide3Attribute($value)
+    {
+        $this->uploadFileToDisk($value, 'mslide3', $this->disk, $this->destination_path);
     }
 }

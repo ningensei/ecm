@@ -76,6 +76,8 @@ Route::group(['middleware' => ['web']], function () {
 	    CRUD::resource('clases', 'Admin\ClasesCrudController');
 	    CRUD::resource('citas', 'Admin\CitasCrudController');
 	    CRUD::resource('configuracion', 'Admin\ConfiguracionCrudController');
+	    CRUD::resource('propuesta', 'Admin\PropuestaCrudController');
+	    CRUD::resource('profesores', 'Admin\ProfesoresCrudController');
 	    CRUD::resource('home', 'Admin\HomeCrudController');
 	    CRUD::resource('cursos', 'Admin\CursosCrudController');
 	    CRUD::resource('noticias', 'Admin\NoticiasCrudController');

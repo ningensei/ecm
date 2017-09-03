@@ -17,7 +17,6 @@ class CreateClasesTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->text('descripcion');
-            $table->text('descripcion_home');
             $table->text('imginterna')->nullable();
             $table->text('imghome')->nullable();
             $table->text('info_gral')->nullable();

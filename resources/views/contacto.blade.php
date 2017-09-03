@@ -9,7 +9,7 @@
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
                 <h1>Contáctanos</h1>
                 <p class="lead">
-                    Para reservar tu cupo acercate a la ECM antes del comienzo del curso. Nuestro horario de atención es de lunes a viernes de 16 a 20 hs o sábados de 10 a 15hs. Coordinar entrevista por mail o vía telefónica.
+                    {!! $configuracion->texto_contacto !!}
                 </p>
             </div>
         </div>

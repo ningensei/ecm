@@ -26,8 +26,7 @@ class ClasesCrudRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest {
     {
         return [
             'titulo' => 'required|min:3|max:255',
-            'descripcion' => 'required|min:10|max:1000',
-            'descripcion_home' => 'required|min:10|max:1000',
+            'descripcion' => 'required|min:10|max:1000'
         ];
     }
 

@@ -44,13 +44,7 @@ class ClasesCrudController extends CrudController {
         $this->crud->addField([
             'type' => 'ckeditor',
             'name' => 'descripcion',
-            'label' => 'Descripción Interna'
-        ]);
-        
-        $this->crud->addField([
-            'type' => 'ckeditor',
-            'name' => 'descripcion_home',
-            'label' => 'Descripción Home'
+            'label' => 'Descripción'
         ]);
         
         $this->crud->addField([

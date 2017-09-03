@@ -23,6 +23,10 @@
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
         <link href="{{ URL::asset('/css/theme-tronic.css') }}" rel="stylesheet" type="text/css" media="all"/>
         <link href="{{ URL::asset('/css/custom.css') }}" rel="stylesheet" type="text/css" media="all"/>
+
+        @if(Storage::disk('public')->exists($configuracion->favicon))
+            <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/'.$configuracion->favicon) }}"/>
+        @endif
         <!--[if gte IE 9]>
         	<link rel="stylesheet" type="text/css" href="css/ie9.css" />
 		<![endif]-->
@@ -38,201 +42,22 @@
     	</div>
 		
         @if(isset($current) and $current == 'home')
-		<div class="nav-container">
-			<nav class="top-bar overlay-bar">
-				<div class="container">
-					<div class="nav-menu">
-						<div class="col-sm-3 col-md-2 columns">
-							<a href="{{ URL::to('/') }}">
-								<img class="logo logo-light" alt="Logo" src="{{ URL::asset('images/ecm.png') }}">
-								<img class="logo logo-dark" alt="Logo" src="{{ URL::asset('images/ecm_dark.png') }}">
-							</a>
-						</div>
-					
-					
-					
-					
-						<div class="col-sm-9 col-md-10 columns">
-							<ul class="menu">
 
-								<li class="has-dropdown"><a href="#">LA ESCUELA</a>
-									<ul class="subnav">
-										<li><a href="{{ URL::to('propuesta') }}">Propuesta</a></li>
-										<li><a href="{{ URL::to('profesores') }}">Profesores</a></li>
-										
-									</ul>
-								</li>
-
-								<li class="has-dropdown"><a href="#">CURSOS</a>
-									<ul class="subnav">
-										@foreach($cursos as $curso)
-											<li><a href="{{ URL::to('cursos/ver/'.$curso->id).'-'.makeSlugs($curso->titulo) }}">{{$curso->titulo}}</a></li>
-										@endforeach
-										
-									</ul>
-								</li>
-
-								<li class="has-dropdown"><a href="#">CLASES</a>
-									<div class="subnav subnav-fullwidth">
-
-										@foreach ($clases->chunk(5) as $chunk)
-										    <div class="col-md-3">
-												<ul class="subnav">
-										        @foreach ($chunk as $clase)
-										            <li><a href="{{ URL::to('clases/ver/'.$clase->id).'-'.makeSlugs($clase->titulo) }}">{{$clase->titulo}}</a></li>
-										        @endforeach
-											    </ul>
-											</div>
-										@endforeach
-										
-									</div>
-								</li>
-
-								<li><a href="{{ URL::to('servicios') }}">SERVICIOS</a></li>
-
-								<li class="has-dropdown"><a href="#">GALERÍA</a>
-									<ul class="subnav">
-										<li><a href="{{ URL::to('fotos') }}">FOTOS</a></li>
-										<li><a href="{{ URL::to('videos') }}">VIDEOS</a></li>
-									</ul>
-								</li>
-
-								<li><a href="{{ URL::to('contacto') }}">CONTACTO</a></li>
-								
-								
-								
-							</ul>
-		
-						</div>
-					</div>
-					
-					<div class="mobile-toggle">
-						<i class="icon icon_menu"></i>
-					</div>
-					
-				</div>
-				<div class="bottom-border"></div>
-			</nav>
-		
-		</div>
+            @include('nav_home')
 
         @else
 
-        <div class="nav-container">
-            <nav class="top-bar">
-                <div class="container">
-                
-                    <div class="row utility-menu">
-                        <div class="col-sm-12">
-                            <div class="utility-inner clearfix">
-                                <span class="alt-font"><i class="icon icon_pin"></i> {{$configuracion->direccion}}</span>
-                                <span class="alt-font"><i class="icon icon_mail"></i> {{$configuracion->email}}</span>
-                            
-                                <div class="pull-right">
-                                    <ul class="social-icons text-right">
-                                        <!-- <li>
-                                            <a href="#">
-                                                <i class="icon social_twitter"></i>
-                                            </a>
-                                        </li> -->
-                                    
-                                        <li>
-                                            <a href="https://www.facebook.com/ECM.musica">
-                                                <i class="icon social_facebook"></i>
-                                            </a>
-                                        </li>
-                                        
-                                        <li>
-                                            <a href="https://www.instagram.com/explore/locations/289877604480424">
-                                                <i class="icon social_instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!--end of row-->
-                
-                
-                    <div class="row nav-menu">
-                        <div class="col-sm-3 col-md-2 columns">
-                            <a href="{{ URL::to('/') }}">
-                                <img class="logo logo-light" alt="Logo" src="{{ URL::asset('images/ecm.png') }}">
-                                <img class="logo logo-dark" alt="Logo" src="{{ URL::asset('images/ecm_dark.png') }}">
-                            </a>
-                        </div>
-                    
-                        <div class="col-sm-9 col-md-10 columns">
-                            <ul class="menu">
-
-                                <li class="has-dropdown"><a href="#">LA ESCUELA</a>
-                                    <ul class="subnav">
-                                        <li><a href="{{ URL::to('propuesta') }}">Propuesta</a></li>
-                                        <li><a href="{{ URL::to('profesores') }}">Profesores</a></li>
-                                        
-                                    </ul>
-                                </li>
-
-                                <li class="has-dropdown"><a href="#">CURSOS</a>
-                                    <ul class="subnav">
-                                        @foreach($cursos as $curso)
-                                            <li><a href="{{ URL::to('cursos/ver/'.$curso->id).'-'.makeSlugs($curso->titulo) }}">{{$curso->titulo}}</a></li>
-                                        @endforeach
-                                        
-                                    </ul>
-                                </li>
-
-                                <li class="has-dropdown"><a href="#">CLASES</a>
-                                    <div class="subnav subnav-fullwidth">
-
-                                        @foreach ($clases->chunk(5) as $chunk)
-                                            <div class="col-md-3">
-                                                <ul class="subnav">
-                                                @foreach ($chunk as $clase)
-                                                    <li><a href="{{ URL::to('clases/ver/'.$clase->id).'-'.makeSlugs($clase->titulo) }}">{{$clase->titulo}}</a></li>
-                                                @endforeach
-                                                </ul>
-                                            </div>
-                                        @endforeach
-                                        
-                                    </div>
-                                </li>
-
-                                <li><a href="{{ URL::to('servicios') }}">SERVICIOS</a></li>
-
-                                <li class="has-dropdown"><a href="#">GALERÍA</a>
-                                    <ul class="subnav">
-                                        <li><a href="{{ URL::to('fotos') }}">FOTOS</a></li>
-                                        <li><a href="{{ URL::to('videos') }}">VIDEOS</a></li>
-                                    </ul>
-                                </li>
-
-                                <li><a href="{{ URL::to('contacto') }}">CONTACTO</a></li>
-                                
-                            </ul>
-                        </div>
-                    </div><!--end of row-->
-                    
-                    <div class="mobile-toggle">
-                        <i class="icon icon_menu"></i>
-                    </div>
-                    
-                </div><!--end of container-->
-            </nav>
-        </div>
+            @include('nav_sections')
 
         @endif
 
-        @if(isset($current))
-		<div class="main-container {{$current.'-container'}}">
-        @else
-        <div class="main-container">
-
-        @endif
+        
+		<div class="main-container {{ $current?$current.'-container':''}}">
 
 			@yield('content')
 
 		</div>
+
 		<div class="footer-container">
 			<footer class="bg-primary short-2">
 				<div class="container">

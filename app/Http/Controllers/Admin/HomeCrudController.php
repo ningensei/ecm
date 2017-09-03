@@ -18,8 +18,28 @@ class HomeCrudController extends CrudController {
         // ----- FIELDS
 
         $this->crud->addField([
+            'name' => 'video',
+            'label' => 'Video',
+            'type' => 'upload',
+            'upload' => true,
+            'disk' => 'public'
+        ]);
+
+
+
+        # slide 1
+
+        $this->crud->addField([
             'name' => 'slider1',
             'label' => 'Imagen Slider 1 (1440 x 768)',
+            'type' => 'upload',
+            'upload' => true,
+            'disk' => 'public'
+        ]);
+
+        $this->crud->addField([
+            'name' => 'mslide1',
+            'label' => 'Imagen Slider 1 (Versión Mobile)',
             'type' => 'upload',
             'upload' => true,
             'disk' => 'public'
@@ -31,9 +51,21 @@ class HomeCrudController extends CrudController {
             'label' => 'Texto Slide 1'
         ]);
 
+
+
+        # slide 2
+
         $this->crud->addField([
             'name' => 'slider2',
             'label' => 'Imagen Slider 2 (1440px x 768)',
+            'type' => 'upload',
+            'upload' => true,
+            'disk' => 'public'
+        ]);
+
+        $this->crud->addField([
+            'name' => 'mslide2',
+            'label' => 'Imagen Slider 2 (Versión Mobile)',
             'type' => 'upload',
             'upload' => true,
             'disk' => 'public'
@@ -45,9 +77,21 @@ class HomeCrudController extends CrudController {
             'label' => 'Texto Slide 2'
         ]);
 
+
+
+        # slide 3
+
         $this->crud->addField([
             'name' => 'slider3',
             'label' => 'Imagen Slider 3 (1440px x 768)',
+            'type' => 'upload',
+            'upload' => true,
+            'disk' => 'public'
+        ]);
+        
+        $this->crud->addField([
+            'name' => 'mslide3',
+            'label' => 'Imagen Slider 3 (Versión Mobile)',
             'type' => 'upload',
             'upload' => true,
             'disk' => 'public'

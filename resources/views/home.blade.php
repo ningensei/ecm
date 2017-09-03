@@ -16,7 +16,7 @@
 						<div class="row">
 							<div class="col-md-6 col-sm-9">
 								<h1 class="text-white">{{ $slide['texto'] }}</h1>
-								<a href="{{URL::to('contacto')}}" class="btn btn-primary btn-white">Contáctanos</a>
+								<a href="{{URL::to('contacto')}}" class="btn btn-primary btn-white">Contactate</a>
 							</div>
 						</div>
 					</div><!--end of container-->
@@ -49,35 +49,25 @@
 		</div>
 	</section>
 
-	<section class="hero-slider">
-		<ul class="slides">
-			<li class="overlay">
-				<div class="background-image-holder parallax-background">
-					<img alt="Background Image" src="img/hero4.jpg">
-				</div>
+	@if(Storage::disk('public')->exists($video))
+	<section class="video-content">
 				
-				<div class="video-wrapper">
+				<div class="videowrapper">
 					<video autoplay="" muted="" loop="">
-						<!-- <source src="video/video.webm" type="video/webm"> -->
-						<source src="video/video_.mp4" type="video/mp4">
-						<!-- <source src="video/video.ogv" type="video/ogg">	 -->
+						<source src="{{ asset('storage/'.$video) }}" type="video/mp4">
 					</video>
 				</div>
 					
-				<div class="container align-vertical">
+				<div class="container align-vertical video-description">
 					<div class="row">
-						<div class="col-sm-9 col-md-8">
+						<div class="col-xs-12 description-content">
 							<h1 class="text-white">Llamanos al {{ $configuracion->telefono }}</h1>
 							<a href="#" class="btn btn-primary btn-white">O consultanos aquí</a>
 						</div>
 					</div>
 				</div><!--end of container-->
-			</li><!--end of individual slide-->
-			
-			<!--end of individual slide-->
-
-		</ul>
 	</section>
+	@endif
 
 	<section class="duplicatable-content">
 
@@ -92,13 +82,14 @@
 
 				@foreach($clases_home as $clase)
 					@if(Storage::disk('public')->exists($clase->imghome))
-						<div class="col-md-2 col-sm-6 item">
+						<div class="col-md-2 col-xs-6 col-sm-4 item icono-clase">
 
 							<div class="feature feature-icon-large text-center">
 
-								<a class="brown" href="{{ URL::to('clases/ver/'.$clase->id) }}">
+								<a class="brown" href="{{ URL::to('clases/ver/'.$clase->id).'-'.makeSlugs($clase->titulo) }}">
 									<img src="{{asset('storage/'.$clase->imghome)}}" class="icon-instrument" alt="{{ $clase->titulo }}"/>
 								</a>
+								<p>{{ $clase->titulo }}</p>
 								
 							</div>
 						</div><!--end 3 col-->

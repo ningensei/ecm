@@ -9,6 +9,7 @@
         "backpack/base": "^0.7.16",
         "backpack/crud": "^3.2",
         "intervention/image": "^2.3",
+        "jenssegers/agent": "^2.5",
         "laravel/framework": "5.3.*"
     },
     "require-dev": {

@@ -27,6 +27,10 @@
           Configuracion</span></a></li>
           <li><a href="{{ url('admin/home') }}"><i class="fa fa-tag"></i> <span>
           Home</span></a></li>
+          <li><a href="{{ url('admin/propuesta') }}"><i class="fa fa-tag"></i> <span>
+          Propuesta</span></a></li>
+          <li><a href="{{ url('admin/profesores') }}"><i class="fa fa-tag"></i> <span>
+          Profesores</span></a></li>
           <li><a href="{{ url('admin/clases') }}"><i class="fa fa-tag"></i> <span>
           Clases</span></a></li>
           <li><a href="{{ url('admin/citas') }}"><i class="fa fa-tag"></i> <span>

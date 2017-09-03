@@ -16,6 +16,7 @@ class CreateConfiguracionTable extends Migration
         Schema::create('configuracion', function (Blueprint $table) {
             $table->increments('id');
             $table->text('texto_contacto');
+            $table->text('favicon');
             $table->string('direccion');
             $table->string('email');
             $table->string('telefono');

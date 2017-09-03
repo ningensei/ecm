@@ -40,6 +40,14 @@ class ConfiguracionCrudController extends CrudController {
             'label' => 'Teléfono'
         ]);
 
+        $this->crud->addField([
+            'name' => 'favicon',
+            'label' => 'Favicon',
+            'type' => 'upload',
+            'upload' => true,
+            'disk' => 'public'
+        ]);
+
     }
 
     public function index()

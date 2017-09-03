@@ -15,6 +15,7 @@ class CreateHomeTable extends Migration
     {
         Schema::create('home', function (Blueprint $table) {
             $table->increments('id');
+            $table->text('video');
             $table->text('slider1');
             $table->text('slider2');
             $table->text('slider3');

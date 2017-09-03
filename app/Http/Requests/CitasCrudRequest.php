@@ -26,8 +26,7 @@ class CitasCrudRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest {
     {
         return [
             'texto' => 'required|min:10|max:1000',
-            'autor' => 'required|min:5|max:255',
-            'edad' => 'required',
+            'autor' => 'required|min:5|max:255'
         ];
     }
 

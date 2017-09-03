@@ -2,16 +2,30 @@
 
 @section('content')
    <section class="pure-text-centered">
+        <?=$breadcrumbs;?>
         <div class="container">
            <div class="row">
-                 <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
                     
                     <h1><strong>Profesores</strong></h1>
                     <p class="lead">
-                        Somos un plantel de profesores comprometidos con la enseñanza. Nos capacitamos constantemente y nos gusta compartir nuestra pasión por la música. Contamos con una amplia experiencia en la enseñanza para niños, adolescentes y adultos. Desarrollamos nuestros propios proyectos musicales y nos desempeñamos en actividades tales como composición, arreglos, producción e interpretación de distintos géneros.
+                        {!! $profesores->texto !!}
                     </p>
                 </div>
+
+                @if(Storage::disk('public')->exists($profesores->imagen))
+                <div class="imagen-profesores col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
+                    <div>
+                        <figure>
+                            <img alt="Imagen Propuesta" src="{{ asset('storage/'.$profesores->imagen) }}">
+                        </figure>
+                    </div>
+                </div>
+                @endif
+
+                
             </div><!--end of row-->
+
 
         </div><!--end of container-->
     </section>

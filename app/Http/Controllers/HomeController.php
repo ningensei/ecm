@@ -24,9 +24,20 @@ class HomeController extends FrontController
 
     public function index() 
     {
+        $home = Home::find(1);
+
         $this->data['current'] = 'home';
 
-        $this->data['slides_home'] = $this->getHomeSlides();
+        $this->data['video'] = $home->video;
+
+        if($this->mobile) {
+            
+            $this->data['slides_home'] = $this->getMobileSlides($home);
+        } else {
+
+            $this->data['slides_home'] = $this->getHomeSlides($home);
+        }
+        
 
         $this->data['clases_home'] = $clases = Clases::inRandomOrder()->whereNotNull('imghome')->get();
 
@@ -38,9 +49,8 @@ class HomeController extends FrontController
     }
 
 
-    private function getHomeSlides()
+    private function getHomeSlides($home)
     {
-        $home = Home::find(1);
         $slides_home = array();
 
         if($home->slider1) {
@@ -61,6 +71,36 @@ class HomeController extends FrontController
         if($home->slider3) {
             $slides_home[] = array(
                 'imagen' => $home->slider3,
+                'texto'  => $home->texto_slide3
+            );
+        }
+
+        return $slides_home;
+    }
+
+
+    private function getMobileSlides($home)
+    {
+        $slides_home = array();
+
+        if($home->mslide1) {
+            $slides_home[] = array(
+                'imagen' => $home->mslide1,
+                'texto'  => $home->texto_slide1
+
+            );
+        }
+
+        if($home->mslide2) {
+            $slides_home[] = array(
+                'imagen' => $home->mslide2,
+                'texto'  => $home->texto_slide2
+            );
+        }
+
+        if($home->mslide3) {
+            $slides_home[] = array(
+                'imagen' => $home->mslide3,
                 'texto'  => $home->texto_slide3
             );
         }

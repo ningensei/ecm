@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Profesores;
 
 class ProfesoresController extends FrontController
 {
@@ -14,6 +15,8 @@ class ProfesoresController extends FrontController
             'Profesores' => false
         ));
         
+        $this->data['profesores'] = Profesores::find(1);
+
     	return view('profesores', $this->data);
     }
 }
