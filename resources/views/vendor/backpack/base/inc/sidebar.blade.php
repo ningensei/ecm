@@ -23,27 +23,27 @@
           trans('backpack::base.dashboard') }}</span></a></li>
           <!-- <li><a href="{{ url(config('backpack.base.route_prefix', 'admin') . '/elfinder') }}"><i class="fa fa-files-o"></i> <span>File manager</span></a></li> -->
           
-          <li><a href="{{ url('admin/configuracion') }}"><i class="fa fa-tag"></i> <span>
+          <li><a href="{{ url('admin/configuracion') }}"><i class="fa fa-cogs"></i> <span>
           Configuracion</span></a></li>
-          <li><a href="{{ url('admin/home') }}"><i class="fa fa-tag"></i> <span>
+          <li><a href="{{ url('admin/home') }}"><i class="fa fa-home"></i> <span>
           Home</span></a></li>
-          <li><a href="{{ url('admin/propuesta') }}"><i class="fa fa-tag"></i> <span>
+          <li><a href="{{ url('admin/propuesta') }}"><i class="fa fa-info-circle"></i> <span>
           Propuesta</span></a></li>
-          <li><a href="{{ url('admin/profesores') }}"><i class="fa fa-tag"></i> <span>
+          <li><a href="{{ url('admin/profesores') }}"><i class="fa fa-graduation-cap"></i> <span>
           Profesores</span></a></li>
-          <li><a href="{{ url('admin/clases') }}"><i class="fa fa-tag"></i> <span>
+          <li><a href="{{ url('admin/clases') }}"><i class="fa fa-list"></i> <span>
           Clases</span></a></li>
-          <li><a href="{{ url('admin/citas') }}"><i class="fa fa-tag"></i> <span>
+          <li><a href="{{ url('admin/citas') }}"><i class="fa fa-quote-right"></i> <span>
           Citas</span></a></li>
-          <li><a href="{{ url('admin/cursos') }}"><i class="fa fa-tag"></i> <span>
+          <li><a href="{{ url('admin/cursos') }}"><i class="fa fa-th-large"></i> <span>
           Cursos</span></a></li>
-          <li><a href="{{ url('admin/noticias') }}"><i class="fa fa-tag"></i> <span>
+          <li><a href="{{ url('admin/noticias') }}"><i class="fa fa-newspaper-o"></i> <span>
           Noticias</span></a></li>
-          <li><a href="{{ url('admin/servicios') }}"><i class="fa fa-tag"></i> <span>
+          <li><a href="{{ url('admin/servicios') }}"><i class="fa fa-check-square-o"></i> <span>
           Servicios</span></a></li>
-          <li><a href="{{ url('admin/videos') }}"><i class="fa fa-tag"></i> <span>
+          <li><a href="{{ url('admin/videos') }}"><i class="fa fa-video-camera"></i> <span>
           Videos</span></a></li>
-          <li><a href="{{ url('admin/fotos') }}"><i class="fa fa-tag"></i> <span>
+          <li><a href="{{ url('admin/fotos') }}"><i class="fa fa-camera"></i> <span>
           Fotos</span></a></li>
 
           
