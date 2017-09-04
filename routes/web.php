@@ -53,6 +53,8 @@ Route::group(['middleware' => ['web']], function () {
 	// Contacto
 
 	Route::get('/contacto', 'ContactoController@index');
+	Route::get('/contacto_test', 'ContactoController@test');
+	Route::get('/contacto_google', 'ContactoController@google');
 	
 	
 

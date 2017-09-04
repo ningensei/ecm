@@ -12,6 +12,8 @@ if($('.grid').length) {
     });    
 }
 
+$('.formFooter').remove();
+console.log('aca');
 
 // $('li.has-dropdown').on('click', function(e) {
 //     e.preventDefault();
