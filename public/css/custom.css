@@ -150,6 +150,10 @@ button:focus {
     outline: none;
 }
 
+.contact-center {
+    padding-bottom: 0;
+}
+
 .form-contact {
     margin-top: 48px;
 }

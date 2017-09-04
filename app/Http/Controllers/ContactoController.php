@@ -16,24 +16,4 @@ class ContactoController extends FrontController
 
     	return view('contacto', $this->data);
     }
-
-    public function test()
-    {
-        $this->data['breadcrumbs'] = breadcrumbs(array(
-            'Home' => url('/'),
-            'Contacto' => false
-        ));
-
-        return view('contacto_test', $this->data);
-    }
-
-    public function google()
-    {
-        $this->data['breadcrumbs'] = breadcrumbs(array(
-            'Home' => url('/'),
-            'Contacto' => false
-        ));
-
-        return view('google', $this->data);
-    }
 }
