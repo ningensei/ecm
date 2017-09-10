@@ -19,10 +19,8 @@ class HomeCrudController extends CrudController {
 
         $this->crud->addField([
             'name' => 'video',
-            'label' => 'Video',
-            'type' => 'upload',
-            'upload' => true,
-            'disk' => 'public'
+            'label' => 'URL Video (youtube)',
+            'type' => 'text'
         ]);
 
 

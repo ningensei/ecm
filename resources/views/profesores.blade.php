@@ -17,7 +17,7 @@
                 <div class="imagen-profesores col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
                     <div>
                         <figure>
-                            <img alt="Imagen Propuesta" src="{{ asset('storage/'.$profesores->imagen) }}">
+                            <img alt="Imagen Profesores" src="{{ url('imagecache/largeimage/'.basename($profesores->imagen)) }}">
                         </figure>
                     </div>
                 </div>

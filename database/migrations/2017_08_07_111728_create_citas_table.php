@@ -15,9 +15,9 @@ class CreateCitasTable extends Migration
     {
         Schema::create('citas', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('texto');
-            $table->string('autor');
-            $table->integer('edad');
+            $table->text('texto')->nullable();
+            $table->string('autor')->nullable();
+            $table->integer('edad')->nullable();
             $table->timestamps();
         });
     }

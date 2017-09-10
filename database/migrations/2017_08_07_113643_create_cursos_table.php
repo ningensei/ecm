@@ -17,6 +17,7 @@ class CreateCursosTable extends Migration
             $table->increments('id');
             $table->string('titulo');
             $table->text('descripcion');
+            $table->text('imginterna');
             $table->text('objetivos')->nullable();
             $table->text('plan_estudio')->nullable();
             $table->timestamps();

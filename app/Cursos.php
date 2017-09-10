@@ -10,8 +10,17 @@ class Cursos extends Model
     use CrudTrait;
 
     protected $table = 'cursos';
-    protected $fillable = ['titulo', 'descripcion', 'objetivos', 'plan_estudio'];
+    protected $fillable = ['titulo', 'imginterna','descripcion', 'objetivos', 'plan_estudio'];
 
     public $timestamps = true;
+
+    public function setImginternaAttribute($value)
+    {
+        $attribute_name = "imginterna";
+        $disk = "public";
+        $destination_path = "uploads/clases";
+
+        $this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
+    }
 
 }

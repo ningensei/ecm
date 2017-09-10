@@ -16,6 +16,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link href="{{ URL::asset('/css/flexslider.min.css') }}" rel="stylesheet" type="text/css" media="all"/>
         <link href="{{ URL::asset('/css/line-icons.min.css') }}" rel="stylesheet" type="text/css" media="all"/>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="{{ URL::asset('/css/simple-line-icons.css') }}">
         <link href="{{ URL::asset('/css/elegant-icons.min.css') }}" rel="stylesheet" type="text/css" media="all"/>
         <link href="{{ URL::asset('/css/lightbox.min.css') }}" rel="stylesheet" type="text/css" media="all"/>
@@ -74,11 +75,26 @@
 				<div class="contact-action">
 					<div class="align-vertical">
 						<i class="icon text-white icon_mail"></i>
-						<a href="{{URL::to('contacto')}}" class="text-white"><span class="text-white">Contáctanos aquí <i class="icon arrow_right"></i></span></a>
+						<a href="{{URL::to('contacto')}}" class="text-white"><span class="text-white">Contacto <i class="icon arrow_right"></i></span></a>
 					</div>
 				</div>
 			</footer>
 		</div>
+        @if ($app->environment('master'))
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-16465585-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>
+        @endif
 				
 		<script src="{{ URL::asset('/js/jquery.min.js') }}"></script>
         <script src="{{ URL::asset('/js/jquery.plugin.min.js') }}"></script>

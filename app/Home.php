@@ -16,11 +16,6 @@ class Home extends Model
 
     public $timestamps = true;
 
-    public function setVideoAttribute($value)
-    {
-        $this->uploadFileToDisk($value, 'video', $this->disk, $this->destination_path);
-    }
-
     public function setSlider1Attribute($value)
     {
         $this->uploadFileToDisk($value, 'slider1', $this->disk, $this->destination_path);

@@ -8,6 +8,8 @@ use App\Noticias;
 use App\Clases;
 use App\Citas;
 use App\Home;
+use Image;
+use Storage;
 
 class HomeController extends FrontController
 {
@@ -28,7 +30,7 @@ class HomeController extends FrontController
 
         $this->data['current'] = 'home';
 
-        $this->data['video'] = $home->video;
+        $this->data['video'] = youtubeEmbedUrl($home->video);
 
         if($this->mobile) {
             
@@ -77,6 +79,8 @@ class HomeController extends FrontController
 
         return $slides_home;
     }
+
+    
 
 
     private function getMobileSlides($home)

@@ -9,7 +9,11 @@
 				@if(Storage::disk('public')->exists($slide['imagen']))
 				<li class="overlay">
 					<div class="background-image-holder parallax-background">
-						<img class="background-image" alt="Background Image" src="{{ asset('storage/'.$slide['imagen']) }}">
+						@if($mobile)
+						<img class="background-image" alt="Background Image" src="{{ url('imagecache/slidermobile/'.basename($slide['imagen'])) }}">
+						@else
+						<img class="background-image" alt="Background Image" src="{{ url('imagecache/extralarge/'.basename($slide['imagen'])) }}">
+						@endif
 					</div>
 					
 					<div class="container align-vertical">
@@ -49,23 +53,19 @@
 		</div>
 	</section>
 
-	@if(Storage::disk('public')->exists($video))
-	<section class="video-content">
-				
-				<div class="videowrapper">
-					<video autoplay="" muted="" loop="">
-						<source src="{{ asset('storage/'.$video) }}" type="video/mp4">
-					</video>
-				</div>
-					
-				<div class="container align-vertical video-description">
-					<div class="row">
-						<div class="col-xs-12 description-content">
-							<h1 class="text-white">Llamanos al {{ $configuracion->telefono }}</h1>
-							<a href="#" class="btn btn-primary btn-white">O consultanos aquí</a>
-						</div>
-					</div>
-				</div><!--end of container-->
+	@if($video)
+	<section class="video-inline">
+	    <div>
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="media-holder fullwidth-video">
+	                    <iframe width="100%" height="315" src="{{$video}}?&showinfo=0&amp;rel=0&amp;modestbranding=1" frameborder="0" allowfullscreen="">
+	                    
+	                    </iframe>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
 	</section>
 	@endif
 
@@ -87,7 +87,7 @@
 							<div class="feature feature-icon-large text-center">
 
 								<a class="brown" href="{{ URL::to('clases/ver/'.$clase->id).'-'.makeSlugs($clase->titulo) }}">
-									<img src="{{asset('storage/'.$clase->imghome)}}" class="icon-instrument" alt="{{ $clase->titulo }}"/>
+									<img src="{{ url('imagecache/clasesicons/'.basename($clase->imghome)) }}" class="icon-instrument" alt="{{ $clase->titulo }}"/>
 								</a>
 								<p>{{ $clase->titulo }}</p>
 								

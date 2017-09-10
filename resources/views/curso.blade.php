@@ -4,9 +4,15 @@
 <section class="pure-text-centered curso">
     <?=$breadcrumbs;?>
 
+    @if(Storage::disk('public')->exists($curso->imginterna))
+    <div class="background-image-holder parallax-background">
+            <img class="background-image" alt="Background Image" src="{{ url('imagecache/extralarge/'.basename($curso->imginterna)) }}">
+    </div>
+    @endif
+
     <div class="container">
         <div class="row">
-            <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
+            <div class="<?=$curso->imginterna?'curso-descripcion':'';?> col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
                 <span class="sub alt-font">CURSOS</span>
                 <h1><strong>{!! $curso->titulo !!}</strong></h1>
                 <p class="lead">{!! $curso->descripcion !!}</p>

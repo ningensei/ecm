@@ -18,7 +18,7 @@
 	                    
 	                    @if(Storage::disk('public')->exists($propuesta->imagen))
 				            <figure>
-		                        <img alt="Imagen Propuesta" src="{{ asset('storage/'.$propuesta->imagen) }}">
+		                        <img alt="Imagen Propuesta" src="{{ url('imagecache/largeimage/'.basename($propuesta->imagen)) }}">
 		                    </figure>
 				        @endif
 				        

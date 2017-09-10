@@ -23,6 +23,14 @@ class CursosCrudController extends CrudController {
             'name' => 'titulo',
             'label' => "Título"
         ]);
+
+        $this->crud->addField([
+            'name' => 'imginterna',
+            'label' => 'Imagen Interna (1500x500)',
+            'type' => 'upload',
+            'upload' => true,
+            'disk' => 'public'
+        ]);
         
         $this->crud->addField([
             'type' => 'ckeditor',

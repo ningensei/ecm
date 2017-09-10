@@ -7,7 +7,7 @@
 		
 		@if(Storage::disk('public')->exists($clase->imginterna))
 	    <div class="background-image-holder parallax-background">
-	    		<img class="background-image" alt="Background Image" src="{{ asset('storage/'.$clase->imginterna) }}">
+	    		<img class="background-image" alt="Background Image" src="{{ url('imagecache/extralarge/'.basename($clase->imginterna)) }}">
 	    </div>
 	    @endif
 	    

@@ -17,14 +17,20 @@
                                 </li> -->
                             
                                 <li>
-                                    <a href="https://www.facebook.com/ECM.musica">
+                                    <a target="_blank" href="https://www.facebook.com/ECM.musica">
                                         <i class="icon social_facebook"></i>
                                     </a>
                                 </li>
                                 
                                 <li>
-                                    <a href="https://www.instagram.com/explore/locations/289877604480424">
+                                    <a target="_blank" href="https://www.instagram.com/explore/locations/289877604480424">
                                         <i class="icon social_instagram"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a target="_blank" style="font-size: 18px;" href="https://api.whatsapp.com/send?phone=5491132680941">
+                                        <i class="fa fa-whatsapp"></i>
                                     </a>
                                 </li>
                             </ul>

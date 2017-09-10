@@ -14,7 +14,11 @@
                         <div class="image-holder" data-scroll-reveal="enter bottom and move 30px">
                             <a href="{{ asset('storage/'.$foto->imagen) }}" data-lightbox="true" data-title="{{$foto->titulo}}">
                                 <div class="background-image-holder">
-                                    <img class="background-image lightbox-image" alt="{{$foto->titulo}}" src="{{asset('storage/'.$foto->imagen) }}">
+                                    @if($foto->ratio == '2-1')
+                                    <img class="background-image lightbox-image" alt="{{$foto->titulo}}" src="{{ url('imagecache/rectangularimage/'.basename($foto->imagen)) }}">
+                                    @else
+                                    <img class="background-image lightbox-image" alt="{{$foto->titulo}}" src="{{ url('imagecache/squareimage/'.basename($foto->imagen)) }}">
+                                    @endif
                                 </div>
                             </a>
                         </div>
