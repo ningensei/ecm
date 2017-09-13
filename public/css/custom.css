@@ -220,7 +220,8 @@ section.curso .curso-descripcion {
 .social-footer li {
     display: inline-block!important;
     margin: 10px;
-    margin-right: 40px;
+    margin-right: 25px;
+    margin-left: 25px;
     font-size: 20px;
 }
 

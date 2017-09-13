@@ -59,7 +59,7 @@
 
 		</div>
 
-		<div class="footer-container visible-xs">
+		<div class="footer-container">
 			<footer class="bg-primary short-2">
                 
 
@@ -81,7 +81,7 @@
 					</div>
 				</div>
 
-                <div class="row social-footer">
+                <div class="row social-footer visible-xs">
                     <div class="col-xs-12">
                         <ul class="text-center">
                             <li>
