@@ -53,19 +53,23 @@
 		</div>
 	</section>
 
-	@if($video)
-	<section class="video-inline">
-	    <div>
-	        <div class="row">
-	            <div class="col-sm-12">
-	                <div class="media-holder fullwidth-video">
-	                    <iframe width="100%" height="315" src="{{$video}}?&showinfo=0&amp;rel=0&amp;modestbranding=1" frameborder="0" allowfullscreen="">
-	                    
-	                    </iframe>
-	                </div>
+	@if(Storage::disk('public')->exists($video))
+	<section class="video-content">
+	            
+	            <div class="videowrapper">
+	                <video autoplay="" muted="" loop="">
+	                    <source src="{{ asset('storage/'.$video) }}" type="video/mp4">
+	                </video>
 	            </div>
-	        </div>
-	    </div>
+	                
+	            <div class="container align-vertical video-description">
+	                <div class="row">
+	                    <div class="col-xs-12 description-content">
+	                        <h1 class="text-white">Llamanos al {{ $configuracion->telefono }}</h1>
+	                        <a href="#" class="btn btn-primary btn-white">O consultanos aquí</a>
+	                    </div>
+	                </div>
+	            </div><!--end of container-->
 	</section>
 	@endif
 
