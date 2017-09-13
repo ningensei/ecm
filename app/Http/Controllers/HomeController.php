@@ -30,7 +30,9 @@ class HomeController extends FrontController
 
         $this->data['current'] = 'home';
 
-        $this->data['video'] = youtubeEmbedUrl($home->video);
+        $this->data['video_mp4'] = $home->mp4video;
+        $this->data['video_ogg'] = $home->oggvideo;
+        $this->data['video_webm'] = $home->webmvideo;
 
         if($this->mobile) {
             

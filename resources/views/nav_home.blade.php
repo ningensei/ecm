@@ -28,7 +28,7 @@
                                     </a>
                                 </li>
 
-                                <li>
+                                <li class="visible-xs">
                                     <a target="_blank" style="font-size: 18px;" href="https://api.whatsapp.com/send?phone=5491132680941">
                                         <i class="fa fa-whatsapp"></i>
                                     </a>

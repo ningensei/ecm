@@ -14,11 +14,17 @@ class CreateHomeTable extends Migration
     public function up()
     {
         Schema::create('home', function (Blueprint $table) {
+            
             $table->increments('id');
-            $table->text('video');
+            
+            $table->text('mp4video');
+            $table->text('oggvideo');
+            $table->text('webmvideo');
+            
             $table->text('slider1');
             $table->text('slider2');
             $table->text('slider3');
+            
             $table->text('texto_slide1');
             $table->text('texto_slide2');
             $table->text('texto_slide3');

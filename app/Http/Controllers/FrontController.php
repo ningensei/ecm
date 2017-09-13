@@ -17,6 +17,7 @@ class FrontController extends Controller
         
         $this->mobile = $agent->isMobile();
         $this->data['mobile'] = $agent->isMobile();
+        $this->data['tablet'] = $agent->isTablet();
 
         $this->data['current'] = false; // default
         

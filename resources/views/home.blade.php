@@ -53,24 +53,34 @@
 		</div>
 	</section>
 
-	@if(Storage::disk('public')->exists($video))
-	<section class="video-content">
-	            
-	            <div class="videowrapper">
-	                <video autoplay="" muted="" loop="">
-	                    <source src="{{ asset('storage/'.$video) }}" type="video/mp4">
-	                </video>
-	            </div>
-	                
-	            <div class="container align-vertical video-description">
-	                <div class="row">
-	                    <div class="col-xs-12 description-content">
-	                        <h1 class="text-white">Llamanos al {{ $configuracion->telefono }}</h1>
-	                        <a href="#" class="btn btn-primary btn-white">O consultanos aquí</a>
-	                    </div>
-	                </div>
-	            </div><!--end of container-->
-	</section>
+	@if($video_mp4 or $video_ogg or $video_webm)
+		@if(!$mobile and !$tablet)
+		<section class="video-content hidden-xs hidden-sm">
+		            
+		            <div class="videowrapper">
+		                <video autoplay="" muted="" loop="">
+		                	@if(Storage::disk('public')->exists($video_mp4))
+		                    <source src="{{ asset('storage/'.$video_mp4) }}" type="video/mp4">
+		                    @endif
+		                    @if(Storage::disk('public')->exists($video_webm))
+		                    <source src="{{ asset('storage/'.$video_webm) }}" type="video/webm">
+		                    @endif
+		                    @if(Storage::disk('public')->exists($video_ogg))
+							<source src="{{ asset('storage/'.$video_ogg) }}" type="video/ogg">	
+							@endif
+		                </video>
+		            </div>
+		                
+		            <div class="container align-vertical video-description">
+		                <div class="row">
+		                    <div class="col-xs-12 description-content">
+		                        <h1 class="text-white">Llamanos al {{ $configuracion->telefono }}</h1>
+		                        <a href="{{URL::to('contacto')}}" class="btn btn-primary btn-white">O consultanos aquí</a>
+		                    </div>
+		                </div>
+		            </div><!--end of container-->
+		</section>
+		@endif
 	@endif
 
 	<section class="duplicatable-content">

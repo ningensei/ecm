@@ -61,6 +61,8 @@
 
 		<div class="footer-container">
 			<footer class="bg-primary short-2">
+                
+
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-10">
@@ -78,6 +80,30 @@
 						<a href="{{URL::to('contacto')}}" class="text-white"><span class="text-white">Contacto <i class="icon arrow_right"></i></span></a>
 					</div>
 				</div>
+
+                <div class="row social-footer">
+                    <div class="col-xs-12">
+                        <ul class="text-center">
+                            <li>
+                                <a target="_blank" href="https://www.facebook.com/ECM.musica">
+                                    <i class="icon social_facebook"></i>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a target="_blank" href="https://www.instagram.com/explore/locations/289877604480424">
+                                    <i class="icon social_instagram"></i>
+                                </a>
+                            </li>
+
+                            <li class="visible-xs">
+                                <a target="_blank" style="font-size: 23px;" href="https://api.whatsapp.com/send?phone=5491132680941">
+                                    <i class="fa fa-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 			</footer>
 		</div>
         @if ($app->environment('master'))

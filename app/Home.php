@@ -10,11 +10,27 @@ class Home extends Model
     use CrudTrait;
 
     protected $table = 'home';
-    protected $fillable = ['video', 'slider1', 'mslide1', 'texto_slide1', 'slider2', 'mslide2', 'texto_slide2', 'slider3', 'mslide3', 'texto_slide3'];
+    protected $fillable = ['mp4video', 'webmvideo', 'oggvideo', 'slider1', 'mslide1', 'texto_slide1', 'slider2', 'mslide2', 'texto_slide2', 'slider3', 'mslide3', 'texto_slide3'];
     private $destination_path = 'uploads/home';
     private $disk = 'public';
 
     public $timestamps = true;
+
+
+    public function setMp4videoAttribute($value)
+    {
+        $this->uploadFileToDisk($value, 'mp4video', $this->disk, $this->destination_path);
+    }
+
+    public function setOggvideoAttribute($value)
+    {
+        $this->uploadFileToDisk($value, 'oggvideo', $this->disk, $this->destination_path);
+    }
+
+    public function setWebmvideoAttribute($value)
+    {
+        $this->uploadFileToDisk($value, 'webmvideo', $this->disk, $this->destination_path);
+    }
 
     public function setSlider1Attribute($value)
     {

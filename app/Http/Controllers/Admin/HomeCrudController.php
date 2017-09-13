@@ -18,11 +18,28 @@ class HomeCrudController extends CrudController {
         // ----- FIELDS
 
         $this->crud->addField([
-            'name' => 'video',
-            'label' => 'URL Video (youtube)',
-            'type' => 'text'
+            'name' => 'mp4video',
+            'label' => 'Video .mp4',
+            'type' => 'upload',
+            'upload' => true,
+            'disk' => 'public'
         ]);
 
+        $this->crud->addField([
+            'name' => 'oggvideo',
+            'label' => 'Video .ogv',
+            'type' => 'upload',
+            'upload' => true,
+            'disk' => 'public'
+        ]);
+
+        $this->crud->addField([
+            'name' => 'webmvideo',
+            'label' => 'Video .webm',
+            'type' => 'upload',
+            'upload' => true,
+            'disk' => 'public'
+        ]);
 
 
         # slide 1
