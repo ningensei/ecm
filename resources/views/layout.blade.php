@@ -59,7 +59,7 @@
 
 		</div>
 
-		<div class="footer-container">
+		<div class="footer-container visible-xs">
 			<footer class="bg-primary short-2">
                 
 
