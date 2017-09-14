@@ -74,7 +74,25 @@
 /* Home */
 
 .icono-clase {
-    height: 130px;
+    height: 150px;
+}
+
+.icono-clase p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.icons-container {
+    margin-top: -40px;
+}
+
+.icono-clase img {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .icon-instrument {
