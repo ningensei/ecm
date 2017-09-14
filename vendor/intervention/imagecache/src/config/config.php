@@ -16,7 +16,7 @@ return array(
     |
     */
    
-    'route' => null,
+    'route' => 'imagecache',
 
     /*
     |--------------------------------------------------------------------------
@@ -31,8 +31,12 @@ return array(
     */
     
     'paths' => array(
-        public_path('upload'),
-        public_path('images')
+        'storage/uploads/home',
+        'storage/uploads/fotos',
+        'storage/uploads/clases',
+        'storage/uploads/profesores',
+        'storage/uploads/propuesta',
+        'storage/uploads/servicios',
     ),
 
     /*
@@ -52,9 +56,14 @@ return array(
     */
    
     'templates' => array(
-        'small' => 'Intervention\Image\Templates\Small',
-        'medium' => 'Intervention\Image\Templates\Medium',
-        'large' => 'Intervention\Image\Templates\Large',
+        'small'        => 'Intervention\Image\Templates\Small',
+        'medium'       => 'Intervention\Image\Templates\Medium',
+        'large'        => 'Intervention\Image\Templates\Large',
+        'extralarge'   => 'App\Filters\extraLarge',
+        'slidermobile' => 'App\Fstilters\sliderMobile',
+        'clasesicons'  => 'App\Filters\clasesIcons',
+        'largeimage'   => 'App\Filters\largeImage',
+        'squareimage'  => 'App\Filters\squareImage',
     ),
 
     /*

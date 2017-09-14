@@ -46,7 +46,7 @@ class LoginController extends Controller
 
         // Redirect here after logout.
         $this->redirectAfterLogout = property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout
-            : config('backpack.base.route_prefix', 'admin').'/login';
+            : config('backpack.base.route_prefix', 'admin');
         // ----------------------------------
     }
 

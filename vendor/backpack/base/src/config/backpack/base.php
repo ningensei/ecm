@@ -12,23 +12,23 @@ return [
     */
 
     // Project name. Shown in the breadcrumbs and a few other places.
-    'project_name' => 'Escuela Creativa de música',
+    'project_name' => 'Backpack',
 
     // Menu logos
-    'logo_lg'   => '<b>ECM</b>',
-    'logo_mini' => '<b>ECM</b>',
+    'logo_lg'   => '<b>Back</b>pack',
+    'logo_mini' => '<b>B</b>p',
 
     // Developer or company name. Shown in footer.
-    'developer_name' => 'Pablo Tomeo',
+    'developer_name' => 'Cristian Tabacitu',
 
     // Developer website. Link in footer.
-    'developer_link' => 'http://pablotomeo.com',
+    'developer_link' => 'http://tabacitu.ro',
 
     // Show powered by Laravel Backpack in the footer?
     'show_powered_by' => true,
 
     // The AdminLTE skin. Affects menu color and primary/secondary colors used throughout the application.
-    'skin' => 'skin-yellow',
+    'skin' => 'skin-purple',
     // Options: skin-black, skin-blue, skin-purple, skin-red, skin-yellow, skin-green, skin-blue-light, skin-black-light, skin-purple-light, skin-green-light, skin-red-light, skin-yellow-light
 
     // Date & Datetime Format Syntax: https://github.com/jenssegers/date#usage
@@ -47,8 +47,7 @@ return [
     |
     */
 
-    // 'registration_open' => (env('APP_ENV') == 'local') ? true : false,
-    'registration_open' => true,
+    'registration_open' => (env('APP_ENV') == 'local') ? true : false,
 
     /*
     |--------------------------------------------------------------------------
@@ -76,4 +75,19 @@ return [
     // Fully qualified namespace of the User model
     'user_model_fqn' => '\App\User',
 
+    /*
+    |--------------------------------------------------------------------------
+    | License Code
+    |--------------------------------------------------------------------------
+    |
+    | If you, your employer or your client make money by using Backpack, you need
+    | to purchase a license code. A license code will be provided after purchse,
+    | which you can put here on in your ENV file.
+    |
+    | More info and payment form on:
+    | https://www.backpackforlaravel.com
+    |
+    */
+
+    'license_code' => env('BACKPACK_LICENSE', false),
 ];
