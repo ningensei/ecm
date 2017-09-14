@@ -1,6 +1,7 @@
 **/.DS_Store
 /public/uploads
 /public/storage
+public/storage
 .env
 .htaccess
 error_log
