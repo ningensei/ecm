@@ -23,7 +23,7 @@
                                     </a>
                                 </li>
                                 
-                                <li class="visible-xs">
+                                <li>
                                     <a href="https://www.instagram.com/explore/locations/289877604480424">
                                         <i class="icon social_instagram"></i>
                                     </a>

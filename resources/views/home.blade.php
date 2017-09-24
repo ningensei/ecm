@@ -123,8 +123,8 @@
 						<ul class="slides">
 							@foreach($citas as $cita)
 								<li>
-									<p class="text-white lead">{{ $cita->texto }}</p>
-									<span class="author text-white">{{ $cita->autor.' - '.$cita->edad }}</span>
+									<p class="text-white lead">{!! $cita->texto !!}</p>
+									<span class="author text-white">{!! $cita->autor.' - '.$cita->edad !!}</span>
 								</li>
 							@endforeach
 						</ul>
