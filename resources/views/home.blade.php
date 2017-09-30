@@ -39,7 +39,7 @@
 		<div class="container">
 			<div class="row">
 				@foreach( $noticias as $noticia )
-				<div class="col-sm-4">
+				<div class="col-sm-4 text-center">
 					<div class="feature">
 						<h5 class="brown">{{ $noticia->titulo }}</h5>
 						<p>
