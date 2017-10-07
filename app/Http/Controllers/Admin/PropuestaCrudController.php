@@ -18,6 +18,24 @@ class PropuestaCrudController extends CrudController {
         // ----- FIELDS
 
         $this->crud->addField([
+            'type' => 'text',
+            'name' => 'seo_title',
+            'label' => 'SEO Título'
+        ]);
+
+        $this->crud->addField([
+            'type' => 'text',
+            'name' => 'seo_description',
+            'label' => 'SEO Descripción'
+        ]);
+
+        $this->crud->addField([
+            'type' => 'text',
+            'name' => 'seo_keywords',
+            'label' => 'SEO Palabras clave'
+        ]);
+        
+        $this->crud->addField([
             'type' => 'ckeditor',
             'name' => 'texto_1',
             'label' => 'Primer párrafo'

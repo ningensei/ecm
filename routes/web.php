@@ -53,9 +53,46 @@ Route::group(['middleware' => ['web']], function () {
 	// Contacto
 
 	Route::get('/contacto', 'ContactoController@index');
-	
-	
 
+	// Eventos
+
+	Route::get('/eventos', 'EventosController@index');
+	
+	
+	/* -------------------------------------- */
+	/*      Redirects Rutas anteriores	      */
+	/* -------------------------------------- */
+
+	# estáticas
+
+	Route::get('/noticias.html', 'RedirectController@home');
+	Route::get('/contacto.html', 'RedirectController@contacto');
+	Route::get('/galeria_fotos.html', 'RedirectController@fotos');
+	Route::get('/escuela_musica.html', 'RedirectController@propuesta');
+	Route::get('/servicios.html', 'RedirectController@servicios');
+	Route::get('/clases_domicilio.html', 'RedirectController@servicios');
+	Route::get('/clases_grupales.html', 'RedirectController@servicios');
+	Route::get('/clases_individuales.html', 'RedirectController@servicios');
+	Route::get('/empresas.html', 'RedirectController@servicios');
+	Route::get('/docentes.html', 'RedirectController@profesores');
+
+	# dinámicas
+
+	Route::get('/c_armonica.html', 'RedirectController@armonica');
+	Route::get('/c_acordeon.html', 'RedirectController@acordeon');
+	Route::get('/c_bajo.html', 'RedirectController@bajo');
+	Route::get('/c_bateria.html', 'RedirectController@bateria');
+	Route::get('/c_canto.html', 'RedirectController@canto');
+	Route::get('/c_cello.html', 'RedirectController@cello');
+	Route::get('/c_clarinete.html', 'RedirectController@clarinete');
+	Route::get('/c_flauta.html', 'RedirectController@flauta');
+	Route::get('/c_guitarra.html', 'RedirectController@guitarra');
+	Route::get('/c_percu.html', 'RedirectController@percu');
+	Route::get('/c_piano.html', 'RedirectController@piano');
+	Route::get('/c_saxo.html', 'RedirectController@saxo');
+	Route::get('/c_uke.html', 'RedirectController@ukelele');
+	Route::get('/c_violin.html', 'RedirectController@violin');
+	
 	/* -------------------------------------- */
 	/*				  BACKEND				  */
 	/* -------------------------------------- */

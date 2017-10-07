@@ -10,7 +10,7 @@ class Profesores extends Model
     use CrudTrait;
 
     protected $table = 'profesores';
-    protected $fillable = ['texto', 'imagen'];
+    protected $fillable = ['seo_title', 'seo_description', 'seo_keywords', 'texto', 'imagen'];
 
     public $timestamps = true;
 

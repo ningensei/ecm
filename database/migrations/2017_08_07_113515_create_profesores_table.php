@@ -15,6 +15,11 @@ class CreateProfesoresTable extends Migration
     {
         Schema::create('profesores', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->text('seo_title')->nullable();
+            $table->text('seo_description')->nullable();
+            $table->text('seo_keywords')->nullable();
+
             $table->text('texto');
             $table->text('imagen')->nullable();
             

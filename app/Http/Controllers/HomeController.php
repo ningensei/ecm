@@ -28,6 +28,12 @@ class HomeController extends FrontController
     {
         $home = Home::find(1);
 
+        $this->data['seo_title'] = $home->seo_title ? $home->seo_title : $this->data['seo_title'];
+
+        $this->data['seo_description'] = $home->seo_description ? $home->seo_description : $this->data['seo_description'];
+        
+        $this->data['seo_keywords'] = $home->seo_keywords ? $home->seo_keywords : $this->data['seo_description'];
+
         $this->data['current'] = 'home';
 
         $this->data['video_mp4'] = $home->mp4video;

@@ -17,6 +17,13 @@ class ClasesController extends FrontController
         $id = explode('-', $slug)[0];
         
         $clase = Clases::find($id);
+
+        $this->data['seo_title'] = $clase->seo_title ? $clase->seo_title : $this->data['seo_title'];
+
+        $this->data['seo_description'] = $clase->seo_description ? $clase->seo_description : $this->data['seo_description'];
+        
+        $this->data['seo_keywords'] = $clase->seo_keywords ? $clase->seo_keywords : $this->data['seo_description'];
+
         $this->data['clase'] = $clase;
 
         $name = $clase->titulo;

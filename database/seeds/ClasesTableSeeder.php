@@ -9,7 +9,6 @@ class ClasesTableSeeder extends Seeder {
         $clases = [
             array(
                 'titulo' => 'Piano y teclado',
-                'descripcion_home' => 'Las clases de piano en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos. Se tiene en cuenta el interés particular de cada alumno (estilo y repertorio) como también sus objetivos.',
                 'descripcion' => 'Las clases de piano en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => ' Se tiene en cuenta el interés particular de cada alumno (estilo y repertorio) como también sus objetivos. En las clases implementamos el método para piano de la Berklee College of Music, además de otras métodos de enseñanza Las clases apuntan tanto a aquellos que quieran aprender piano como una actividad recreativa como a aquellos que buscan una formación profesional. Ofrecemos la posibilidad de prepararse para exámenes de ingreso a conservatorios y distintas instituciones. Además de clases particulares de piano los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia.',
@@ -29,7 +28,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Canto',
-                'descripcion_home' => 'Las clases de canto en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de canto en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno (estilo y repertorio) como también sus objetivos. Las clases apuntan tanto a aquellos que quieran aprender piano como una actividad recreativa como a aquellos que buscan una formación profesional. <>Además de clases particulares de canto los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir con otros músicos. Las clases pueden ser individuales o grupales. Consultanos por grupos de acuerdo a tu edad y nivel. ',
                 'objetivos' => 'Que el alumno logre un correcto y saludable uso de la voz. Desarrollar su creatividad y ayudarlo a descubrir su propia voz. Otorgarle las herramientas necesarias para poder interpretar canciones de distintos estilos y poder desempeñarse a la hora de tocar junto a otros.',
@@ -46,7 +44,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Guitarra criolla y eléctrica',
-                'descripcion_home' => 'Las clases de guitarra en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de guitarra en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilos y repertorio. Las clases apuntan tanto a aquellos que quieran aprender guitarra como una actividad recreativa como a aquellos que buscan una formación profesional. Implementamos el método para guitarra de la Berklee College of Music, además de otras métodos de enseñanza. Ofrecemos la posibilidad de prepararse para exámenes de ingreso a conservatorios y distintas instituciones. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia.',
@@ -63,7 +60,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Bajo',
-                'descripcion_home' => 'Las clases de bajo en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de bajo en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilo y repertorio. Las clases apuntan tanto a aquellos que quieran aprender bajo como una actividad recreativa como a aquellos que buscan una formación profesional. Ofrecemos la posibilidad de prepararse para exámenes de ingreso a conservatorios y distintas instituciones. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia. ',
@@ -79,7 +75,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Contrabajo',
-                'descripcion_home' => 'Las clases de contrabajo en la ECM están dirigidas a adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de contrabajo en la ECM están dirigidas a adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuánto a estilo y repertorio como también sus objetivos. Las clases apuntan tanto a aquellos que quieran aprender contrabajo como una actividad recreativa como a aquellos que buscan una formación profesional. Ofrecemos la posibilidad de prepararse para exámenes de ingreso a conservatorios y distintas instituciones. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia. ',
@@ -95,7 +90,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Cello',
-                'descripcion_home' => 'Las clases de cello en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de cello en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilo y repertorio. Las clases apuntan tanto a aquellos que quieran aprender bajo como una actividad recreativa como a aquellos que buscan una formación profesional. Ofrecemos la posibilidad de prepararse para exámenes de ingreso a conservatorios y distintas instituciones. Se trabaja desde una concientización de nuestro propio cuerpo; a través de distintos ejercicios y pautas. El sonido habla del estado del que lo ejecuta, a través de éste se desarrolla la percepción, la relajación, la afinación y la musicalidad.  Tomamos elementos del método Suzuki y de otras métodos de enseñanza. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia.',
@@ -111,7 +105,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Violín',
-                'descripcion_home' => 'Las clases de violín en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de violín en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilo y repertorio. Las clases apuntan tanto a aquellos que quieran aprender violín como una actividad recreativa como a aquellos que buscan una formación profesional. Ofrecemos la posibilidad de prepararse para exámenes de ingreso a conservatorios y distintas instituciones. Se trabaja desde una concientización de nuestro propio cuerpo; a través de distintos ejercicios y pautas. El sonido habla del estado del que lo ejecuta, a través de éste se desarrolla la percepción, la relajación, la afinación y la musicalidad.   Tomamos elementos del método Suzuki y de otros métodos de enseñanza. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia.',
@@ -126,7 +119,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Viola',
-                'descripcion_home' => 'Las clases de violín en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos. Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilo y repertorio.',
                 'descripcion' => 'Las clases de violín en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos. Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilo y repertorio.',
                 'info_gral' => 'Las clases apuntan tanto a aquellos que quieran aprender violín como una actividad recreativa como a aquellos que buscan una formación profesional. Ofrecemos la posibilidad de prepararse para exámenes de ingreso a conservatorios y distintas instituciones. Se trabaja desde una concientización de nuestro propio cuerpo; a través de distintos ejercicios y pautas. El sonido habla del estado del que lo ejecuta, a través de éste se desarrolla la percepción, la relajación, la afinación y la musicalidad. Tomamos elementos del método Suzuki y de otras métodos de enseñanza. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia.',
@@ -141,7 +133,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Armónica',
-                'descripcion_home' => 'Las clases de armónica en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de armónica en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilo y repertorio. Las clases apuntan tanto a aquellos que quieran aprender armónica como una actividad recreativa como a aquellos que buscan una formación profesional. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia.',
@@ -156,7 +147,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Batería',
-                'descripcion_home' => 'Las clases de batería en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de batería en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilo y repertorio. Las clases apuntan tanto a aquellos que quieran aprender batería cómo una actividad recreativa como a aquellos que buscan una formación profesional. Las clases pueden ser exclusivamente de batería o también incorporar otros instrumentos de percusión. Ofrecemos la posibilidad de prepararse para exámenes de ingreso a conservatorios y distintas instituciones. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia.',
@@ -172,7 +162,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Percusión',
-                'descripcion_home' => 'Las clases de percusión en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de percusión en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'En las clases se puede trabajar con djembe, bongoe y cajón peruano. Además se puede incorporar el aprendizaje de batería. Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilo y repertorio. Las clases apuntan tanto a aquellos que quieran aprender percusión como una actividad recreativa como a aquellos que buscan una formación profesional. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia.',
@@ -188,7 +177,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Acordeón a piano',
-                'descripcion_home' => 'Las clases de acordeón a piano en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de acordeón a piano en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno, sus preferencia en cuanto a estilos y repertorio. Las clases apuntan tanto a aquellos que quieran aprender acordeón como una actividad recreativa como a aquellos que buscan una formación profesional. Ofrecemos la posibilidad de prepararse para exámenes de ingreso a conservatorios y distintas instituciones. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia.',
@@ -203,7 +191,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Saxo',
-                'descripcion_home' => 'Las clases de saxo en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de saxo en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilo y repertorio. Las clases apuntan tanto a aquellos que quieran aprender saxo como una actividad recreativa como a aquellos que buscan una formación profesional. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia. ',
@@ -220,7 +207,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Clarinete',
-                'descripcion_home' => 'Las clases de clarinete en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de clarinete en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilo y repertorio. Las clases apuntan tanto a aquellos que quieran aprender clarinete como una actividad recreativa como a aquellos que buscan una formación profesional. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia.',
@@ -237,7 +223,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Flauta traversa',
-                'descripcion_home' => 'Las clases de flauta traversa en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de flauta traversa en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilo y repertorio. Las clases apuntan tanto a aquellos que quieran aprender flauta traversa como una actividad recreativa como a aquellos que buscan una formación profesional. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia.',
@@ -254,7 +239,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Ukelele',
-                'descripcion_home' => 'Las clases de ukelele en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'descripcion' => 'Las clases de ukelele en la ECM están dirigidas a niños, adolescentes y adultos con o sin experiencia. Las clases son personalizadas y se adaptan a los conocimientos previos de los alumnos.',
                 'info_gral' => 'Se tiene en cuenta el interés particular de cada alumno, sus preferencias en cuanto a estilos y repertorio. Además de clases particulares, los alumnos están invitados a participar de distintos ensambles y presentaciones en vivo para enriquecer la experiencia musical y poder compartir junto a otros músicos.',
                 'objetivos' => 'Lograr que el alumno lea y escriba música; y pueda interpretarla. Desarrollar su creatividad y un estilo propio. Lograr que el alumno se pueda desenvolver tocando en grupo, adaptándose y aportando su identidad musical propia.',
@@ -269,7 +253,6 @@ class ClasesTableSeeder extends Seeder {
 
             array(
                 'titulo' => 'Iniciación musical',
-                'descripcion_home' => 'Las clases de iniciación están pensadas para los más chicos, pueden participar de esta modalidad a partir de los 4 años en adelante. En las mismas se exploran distintos instrumentos como el piano, la guitarra, la percusión, la batería y la voz.',
                 'descripcion' => 'Las clases de iniciación están pensadas para los más chicos, pueden participar de esta modalidad a partir de los 4 años en adelante. En las mismas se exploran distintos instrumentos como el piano, la guitarra, la percusión, la batería y la voz.',
                 'info_gral' => 'Es un espacio de recreación cuyo objetivo es desarrollar, mediante un modo lúdico, las capacidades musicales de los chicos. La estructura de las clases poseen la flexibilidad necesaria para ajustarse a las necesidades y al nivel de cada alumno. Las actividades planteadas tienen que ver esencialmente con elementos de la música: el ritmo, las melodías, la armonía, la lectura. Las clases pueden ser individuales o grupales. Consultanos por grupos de acuerdo a la edad del interesado.',
                 'objetivos' => 'Introducir al alumno en el lenguaje musical
@@ -287,7 +270,6 @@ class ClasesTableSeeder extends Seeder {
 
             DB::table('clases')->insert([
                 'titulo' => $clase['titulo'],
-                'descripcion_home' => $clase['descripcion_home'],
                 'descripcion' => $clase['descripcion'],
                 'info_gral' => $clase['info_gral'],
                 'objetivos' => $clase['objetivos'],

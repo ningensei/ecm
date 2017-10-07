@@ -10,7 +10,7 @@ class Propuesta extends Model
     use CrudTrait;
 
     protected $table = 'propuesta';
-    protected $fillable = ['texto_1', 'texto_2', 'texto_3', 'imagen'];
+    protected $fillable = ['seo_title', 'seo_description', 'seo_keywords', 'texto_1', 'texto_2', 'texto_3', 'imagen'];
 
     public $timestamps = true;
 

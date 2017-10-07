@@ -10,7 +10,7 @@ class Cursos extends Model
     use CrudTrait;
 
     protected $table = 'cursos';
-    protected $fillable = ['titulo', 'imginterna','descripcion', 'objetivos', 'plan_estudio'];
+    protected $fillable = ['seo_title', 'seo_description', 'seo_keywords', 'titulo', 'imginterna','descripcion', 'objetivos', 'plan_estudio'];
 
     public $timestamps = true;
 

@@ -10,7 +10,7 @@ class Configuracion extends Model
     use CrudTrait;
 
     protected $table = 'configuracion';
-    protected $fillable = ['texto_contacto', 'direccion', 'email', 'telefono', 'favicon'];
+    protected $fillable = ['seo_title', 'seo_description', 'seo_keywords', 'texto_contacto', 'direccion', 'email', 'telefono', 'favicon'];
 
     public $timestamps = true;
 

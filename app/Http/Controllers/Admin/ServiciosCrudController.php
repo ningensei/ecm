@@ -18,7 +18,6 @@ class ServiciosCrudController extends CrudController {
 
         // ----- FIELDS
 
-        
         $this->crud->addField([
             'type' => 'text',
             'name' => 'titulo',

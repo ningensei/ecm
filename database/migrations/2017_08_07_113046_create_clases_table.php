@@ -16,6 +16,11 @@ class CreateClasesTable extends Migration
         Schema::create('clases', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo');
+
+            $table->text('seo_title')->nullable();
+            $table->text('seo_description')->nullable();
+            $table->text('seo_keywords')->nullable();
+
             $table->text('descripcion');
             $table->text('imginterna')->nullable();
             $table->text('imghome')->nullable();

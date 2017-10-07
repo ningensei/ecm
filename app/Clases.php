@@ -10,7 +10,7 @@ class Clases extends Model
     use CrudTrait;
 
     protected $table = 'clases';
-    protected $fillable = ['imginterna', 'imghome', 'modalidad', 'titulo', 'descripcion_home', 'descripcion', 'info_gral', 'objetivos', 'plan_estudio', 'contenidos_teoricos'];
+    protected $fillable = ['seo_title', 'seo_description', 'seo_keywords', 'imginterna', 'imghome', 'modalidad', 'titulo', 'descripcion_home', 'descripcion', 'info_gral', 'objetivos', 'plan_estudio', 'contenidos_teoricos'];
 
     public $timestamps = true;
 

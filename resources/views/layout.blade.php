@@ -7,10 +7,10 @@
     <head>
         <meta charset="utf-8">
         
-        <title>Escuela creativa de musica | Zona Norte</title>
-        <meta name="description" content="Escuela de música. Todos los instrumentos en Vicente Lopez, Zona Norte">
+        <title>{{ $seo_title }}</title>
+        <meta name="description" content="{{ $seo_description }}">
       
-        <meta name="keywords" content="Estudiar piano canto guitarra bajo violin audio clases de musica extracurriculares produccion musical clarinete saxo | Bateria | Percu | Canto | Cello | Violin | Acordeon | Saxo | Clarinete | Flauta | Armonica">
+        <meta name="keywords" content=" {{ $seo_keywords }} ">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">

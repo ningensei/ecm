@@ -15,8 +15,13 @@ class CreateConfiguracionTable extends Migration
     {
         Schema::create('configuracion', function (Blueprint $table) {
             $table->increments('id');
+            
+            $table->text('seo_title')->nullable();
+            $table->text('seo_description')->nullable();
+            $table->text('seo_keywords')->nullable();
+
             $table->text('texto_contacto');
-            $table->text('favicon');
+            $table->text('favicon')->nullable();
             $table->string('direccion');
             $table->string('email');
             $table->string('telefono');

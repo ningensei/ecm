@@ -15,6 +15,11 @@ class CreatePropuestaTable extends Migration
     {
         Schema::create('propuesta', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->text('seo_title')->nullable();
+            $table->text('seo_description')->nullable();
+            $table->text('seo_keywords')->nullable();
+
             $table->text('texto_1');
             $table->text('texto_2');
             $table->text('texto_3');

@@ -13,6 +13,13 @@ class CursosController extends FrontController
         $id = explode('-', $slug)[0];
 
         $curso = Cursos::find($id);
+
+        $this->data['seo_title'] = $curso->seo_title ? $curso->seo_title : $this->data['seo_title'];
+
+        $this->data['seo_description'] = $curso->seo_description ? $curso->seo_description : $this->data['seo_description'];
+        
+        $this->data['seo_keywords'] = $curso->seo_keywords ? $curso->seo_keywords : $this->data['seo_description'];
+
         $this->data['curso'] = $curso;
         
         $name = $curso->titulo;

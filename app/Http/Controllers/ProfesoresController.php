@@ -15,7 +15,14 @@ class ProfesoresController extends FrontController
             'Profesores' => false
         ));
         
-        $this->data['profesores'] = Profesores::find(1);
+        $profesores = Profesores::find(1);
+        $this->data['profesores'] = $profesores;
+
+        $this->data['seo_title'] = $profesores->seo_title ? $profesores->seo_title : $this->data['seo_title'];
+
+        $this->data['seo_description'] = $profesores->seo_description ? $profesores->seo_description : $this->data['seo_description'];
+        
+        $this->data['seo_keywords'] = $profesores->seo_keywords ? $profesores->seo_keywords : $this->data['seo_description'];
 
     	return view('profesores', $this->data);
     }
