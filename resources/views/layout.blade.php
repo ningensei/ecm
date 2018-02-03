@@ -66,7 +66,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-10">
-							<span class="text-white">© 2017 ECM</span>
+							<span class="text-white">© <?php echo date('Y')?> ECM</span>
 							<span class="text-white"><a href="#">{{$configuracion->email}}</a></span>
 							<span class="text-white">{{$configuracion->telefono}}</span>
 							<span class="text-white">{{$configuracion->direccion}}</span>
